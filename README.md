@@ -1,2 +1,6 @@
-# AFP_1_2021
- WIP group
+# Alkalmazások Fejlesztése Projektlabor 1
+## WIP - Mini Project
+Dokumentumok:
+* [Rendszerterv]()
+* [Funkcionális specifikáció]()
+* [Követelmény specifikáció]()
