@@ -17,6 +17,10 @@ A rendszer célja egy Webes felülettel rendelkező elektronikus órarend tervez
  * Felhasználó: Tud a személyes órarendjében új tárgyakat rögzíteni illetve a tárgy adatait felvenni hozzá, tud tárgyakat törölni, tudja a tárgyainak adatai módosítását, tud tárgyat felvenni az órarendjébe, tud tárgyat törölni az órarendjéből, megtudja tekinteni az órarendjét.
  * Vendég: Csak egy betekintő áll rendelkezésére amikor megnyitja a weblapot.
 
+## 4. Jelenlegi üzleti folyamatok modellje
+
+A mai világban az oktatási intézmények a meghirdetett tárgyakat nagyon rugalmasan kezelik, ezért gyakran változnak a kurzusok időpontjai, helyei és oktatói. Ezt a sok változást nem könnyű papíron vezetni, erre a problémára nyújt megoldást az órarend tervező webes alkalmazás. Könnyen lehet módosítani az órarendet, törölni vagy hozzáadni új kurzusokat.
+
 ## 5. Igényelt üzleti folyamatok modellje
     5.1 Bejelentkezés
         5.1.1 Órarend menüpont 
