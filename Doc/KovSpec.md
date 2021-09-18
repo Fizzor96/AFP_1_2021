@@ -22,6 +22,10 @@ Regisztráció nélkül semmilyen funkciót nem ér el, számára csak betekint�
  * Felhasználó: Tud a személyes órarendjében új tárgyakat rögzíteni illetve a tárgy adatait felvenni hozzá, tud tárgyakat törölni, tudja a tárgyainak adatai módosítását, tud tárgyat felvenni az órarendjébe, tud tárgyat törölni az órarendjéből, megtudja tekinteni az órarendjét.
  * Vendég: Csak egy betekintő áll rendelkezésére amikor megnyitja a weblapot.
 
+## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
+
+Opensource szoftver. Bárki által letölthető és felhasználható. Az értékesítése nem megengedett!
+
 ## 6. Jelenlegi üzleti folyamatok modellje
     6.1 Az órarend és tárgyak adatainak nyilvántartása
         6.1.1 Új tárgy rögzítése: regisztrált felhasználó végzi -> Tárgy rendszerbe való rögzítése
