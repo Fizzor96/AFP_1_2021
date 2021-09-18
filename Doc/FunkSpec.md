@@ -32,6 +32,8 @@ A rendszer célja egy Webes felülettel rendelkező elektronikus órarend tervez
         5.1. Kijelentkezés
     5.2 Regisztráció
 
+## 6. Használati esetek
+
 ## 9. Fogalomszótár
 - **UML** - Unified Modeling Language
 - **Reszponzív felület** - Mobilon, Tableten, PC-n igazodik a
