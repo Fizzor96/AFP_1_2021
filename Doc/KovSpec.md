@@ -44,3 +44,14 @@ Regisztráció nélkül semmilyen funkciót nem ér el, számára csak betekint�
         7.1.4 Felhasználók törlése
         7.1. Kijelentkezés
     7.2 Regisztráció
+
+## 8. Követelménylista
+
+Modul | ID | Név | Kifejtés
+--- | --- | --- | ----------------------------------------------------------------------
+Jogosultság | K1 | Bejelentkezési felület | A felhasználó a felhasználónevével és jelszava segítségével jelentkezhet be. Nem megfelelő felhasználónév vagy jelszó esetén, a felhasználó hibaüzenetet kap.
+Jogosultság | K2 | Regisztrációs felület | A felhasználó felhasználónév, e-mail cím és jelszó megadásával regisztrálhatja magát. A jelszó tárolása titkosított formában történik az adatbázisban. Bármely adat hiánya vagy a követelményeknek való nem megfelelése esetén, a felhasználó hibaüzenetet kap.
+Jogosultság | K3 | Jogosultsági szintek | -Admin: Teljes hozzáférése van a weboldalhoz, szerkesztheti, kilistázhatja és törölheti a felhasználók adatait is. <br> -Felhasználó: Tud a személyes órarendjében új tárgyakat rögzíteni illetve a tárgy adatait felvenni hozzá, tud tárgyakat törölni, tudja a tárgyainak adatai módosítását, tud tárgyat felvenni az órarendjébe, tud tárgyat törölni az órarendjéből, megtudja tekinteni az órarendjét. <br> -Vendég: Csak egy betekintő áll rendelkezésére amikor megnyitja a weblapot.
+Felület | K4 | Felhasználók listája | Admin jogosultsággal megtekinthető és megváltoztatható a felhasználók felhasználóneve, e-mail címe és jogosultsági szintje.
+Felület | K5 | Órarend | Felhasználó jogosultsággal lehet tárgyakat felvenni és törölni az órarendből, továbbá meg lehet tekinteni az órarendet.
+Felület | K6 | Tárgy | Regisztrált felhasználó tud új tárgyakat rögzíteni, vagy meglévőt módosítani.
