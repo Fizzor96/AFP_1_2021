@@ -43,6 +43,12 @@ Az admin hozzáfér a felhasználók teljes listájához, amely felhasználónev
 Felhasználó: 
 A felhasználó megtekintheti a saját órarendjét, ezen kívül tud felvenni új tárgyakat, ahhoz tud tárgy adatokat felvenni. A felvett tárgyakat tudja törölni. Az órarendbe ezeket a felvett tárgyakat be tudja helyezni illetve tudja azt a saját órarendjéből törölni is. Ugyanitt tudja a felvett tárgyaknak az adatait szerkeszteni is. 
 
+## 8. Forgatókönyv
+
+ A program nem kíván különösebb telepítési és használati útmutatót. Elég, ha egy grafikus felülettel rendelkező webböngésző fel van telepítve ( alapértelmezett: windows - internet explorer / edge, linux: mozilla, mac - safari ). A felhasználó beüti az oldal címét: xyz.com a böngésző címsorába és rögtön át lesz irányítva az oldalra. Az oldal tartalmát a webszerver szolgáltatja a mögötte lévő adatbázis segítségével. Az oldalra átírányítva a felhasználó megkezdheti a saját órarendjének összeállítását ha regisztrált az oldalra, majd bejelentkezett. Ha a felhasználónak bármi nemű problémája akad az oldal működésével kapcsolatban, akkor a megadott elérhetőségek alapján tudja ezt jelezni az oldal karbantartói felé.
+ Az oldal adminisztrátorai moderálják az oldalra nem illő tartalmakat a megfelelő eszközök segítségével.
+ Az oldal karbantartásáért felelős csapat pedig az oldal rendeltetésének megfelelő működését ellenőrzi és javítja a felmerülő problémákat.
+
 ## 9. Fogalomszótár
 - **UML** - Unified Modeling Language
 - **Reszponzív felület** - Mobilon, Tableten, PC-n igazodik a
