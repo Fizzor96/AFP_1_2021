@@ -34,6 +34,9 @@ A rendszer célja egy Webes felülettel rendelkező elektronikus órarend tervez
 
 ## 6. Használati esetek
 
+Admin: Az admin hozzáfér a felhasználók teljes listájához, amely felhasználónevet, e-mail címet és jogkört tartalmaz. Ezen kívül a felhasználók listájában tudja szerkeszteni a felhasználó adatait illetve tudja törölni az egyes felhasználókat.
+Felhasználó: A felhasználó megtekintheti a saját órarendjét, ezen kívül tud felvenni új tárgyakat, ahhoz tud tárgy adatokat felvenni. A felvett tárgyakat tudja törölni. Az órarendbe ezeket a felvett tárgyakat be tudja helyezni illetve tudja az órarendjéből törölni is. Ugyanitt tudja a felvett tárgyaknak az adatait szerkeszteni is
+
 ## 9. Fogalomszótár
 - **UML** - Unified Modeling Language
 - **Reszponzív felület** - Mobilon, Tableten, PC-n igazodik a
