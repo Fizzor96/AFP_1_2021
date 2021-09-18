@@ -31,3 +31,5 @@ A rendszer célja egy Webes felülettel rendelkező elektronikus órarend tervez
         5.1.4 Felhasználók törlése
         5.1. Kijelentkezés
     5.2 Regisztráció
+
+## 9. Fogalomszótár
