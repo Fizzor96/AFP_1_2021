@@ -54,6 +54,60 @@ Az admin hozzáfér a felhasználók teljes listájához, amely felhasználónev
 Felhasználó: 
 A felhasználó megtekintheti a saját órarendjét, ezen kívül tud felvenni új tárgyakat, ahhoz tud tárgy adatokat felvenni. A felvett tárgyakat tudja törölni. Az órarendbe ezeket a felvett tárgyakat be tudja helyezni illetve tudja azt a saját órarendjéből törölni is. Ugyanitt tudja a felvett tárgyaknak az adatait szerkeszteni is. 
 
+## 7. Képernyőterv
+ 
+ Főoldalterv:
+ 
+ ![Főoldalterv](../Doc/Pictures/home_page.png)
+
+  Főoldalterv-login:
+ 
+ ![Főoldalterv-login](../Doc/Pictures/login.png)
+
+  Főoldalterv-regisztráció:
+ 
+ ![Főoldalterv-register](../Doc/Pictures/register.png)
+ 
+ Bejelentkezés utáni főoldal (user):
+ 
+ ![Főoldalterv-user](../Doc/Pictures/home_page_logged.png)
+
+  Bejelentkezés utáni főoldal (user) kurzor az "Órarend" menüponton:
+ 
+ ![Főoldalterv-user](../Doc/Pictures/home_page_logged_cursor.png)
+ 
+ Bejelentkezés utáni főoldal (admin):
+ 
+ ![Főoldalterv-admin](../Doc/Pictures/home_page_logged_admin.png)
+ 
+ Órarend menüpont:
+ 
+ ![Óra-hozzáadása](../Doc/Pictures/add_class_page.png)
+
+ Óra hozzáadása az órarendhez menüpont:
+ 
+ ![Óra-hozzáadása-az-órarendembe](../Doc/Pictures/add_class_timetable.png)
+
+ Óra törlése menüpont:
+ 
+ ![Óra-törlése](../Doc/Pictures/delete_class_timetable.png)
+
+   Óra szerkesztése:
+ 
+ ![Óra-szerkesztése](../Doc/Pictures/edit_class.png)
+ 
+ Felhasználók listája (admin):
+ 
+ ![Felhasználók-listája-terv](../Doc/Pictures/home_page_logged.png)
+ 
+ Felhasználók szerkesztése (admin):
+ 
+ ![Felhasználók-szerkesztése](../Doc/Pictures/edit_user.png)
+ 
+ Admin:
+ 
+ ![Felhasználók-megjelenítése](../Doc/Pictures/admin.png)
+
 ## 8. Forgatókönyv
 
  A program nem kíván különösebb telepítési és használati útmutatót. Elég, ha egy grafikus felülettel rendelkező webböngésző fel van telepítve ( alapértelmezett: windows - internet explorer / edge, linux: mozilla, mac - safari ). A felhasználó beüti az oldal címét: xyz.com a böngésző címsorába és rögtön át lesz irányítva az oldalra. Az oldal tartalmát a webszerver szolgáltatja a mögötte lévő adatbázis segítségével. Az oldalra átírányítva a felhasználó megkezdheti a saját órarendjének összeállítását ha regisztrált az oldalra, majd bejelentkezett. Ha a felhasználónak bármi nemű problémája akad az oldal működésével kapcsolatban, akkor a megadott elérhetőségek alapján tudja ezt jelezni az oldal karbantartói felé.
