@@ -3,6 +3,10 @@ A rendszer célja egy Webes felülettel rendelkező elektronikus órarend tervez
 
 ## 2. Jelenlegi helyzet
 
+A megrendelő szeretné jobban elérhetővé tenni a felhasználók órarendjének megtekintésést, tárolásást.
+A megrendelő számára kiemelten fontos, hogy az oldal könnyen kezelhető és áttekinthető legyen. Ezért kért fel minket, hogy készítsünk számára egy weblapot, egy virtuális teret amely ezt a szándékát segíti.
+A teret egy online órarend formájában szeretné megvalósítani.
+Azt szeretné, ha az egyetemeken előforduló rengeteg tanórát egy helyre gyűjtenénk össze megspórolva rengeteg időt azoknak akik egyesével szeretnék leírni az órájuk összes információját.
 
 
 ## 3. Követelménylista
