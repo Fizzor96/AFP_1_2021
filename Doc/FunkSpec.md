@@ -1,5 +1,10 @@
 ## 1. Áttekintés
 A rendszer célja egy Webes felülettel rendelkező elektronikus órarend tervező létrehozása. Ezen felületen a regisztrált felhasználók megtervezhetik a saját órarendjüket, új tárgyakat vehetnek fel a rendszerbe,meglévő tárgyakat törölhetnek, szerkeszthetik a meglévő tárgyakat és módosíthatják ezek adatait. Regisztráció nékül ezen funkciók nem elérhetőek, a felhasználó csak betekintést kap a weboldalra. A weblap része lesz egy felhasználó kezelő rendszer, ahol három különböző szint lesz, ezek a vendég, felhasználó és az admin. A weblap teljes mértékben ingyenes lesz, nincs semmi tartalom vagy extra funkció amiért fizetni kellene. 
+
+## 2. Jelenlegi helyzet
+
+
+
 ## 3. Követelménylista
 
 1. Bejelentkezési felület:
