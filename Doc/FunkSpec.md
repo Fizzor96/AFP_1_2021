@@ -60,7 +60,7 @@ A felhasználó megtekintheti a saját órarendjét, ezen kívül tud felvenni �
  
  ![Főoldalterv](../Doc/Pictures/home_page.png)
 
-  Főoldalterv-login:
+  Főoldalterv-belépés:
  
  ![Főoldalterv-login](../Doc/Pictures/login.png)
 
@@ -76,11 +76,15 @@ A felhasználó megtekintheti a saját órarendjét, ezen kívül tud felvenni �
  
  ![Főoldalterv-user](../Doc/Pictures/home_page_logged_cursor.png)
  
+   Órarend megjelenítése:
+ 
+ ![Óra-szerkesztése](../Doc/Pictures/timetable.png)
+
  Bejelentkezés utáni főoldal (admin):
  
  ![Főoldalterv-admin](../Doc/Pictures/home_page_logged_admin.png)
  
- Órarend menüpont:
+ Óra rögzítése az adatbázisba:
  
  ![Óra-hozzáadása](../Doc/Pictures/add_class_page.png)
 
@@ -95,10 +99,6 @@ A felhasználó megtekintheti a saját órarendjét, ezen kívül tud felvenni �
    Óra szerkesztése:
  
  ![Óra-szerkesztése](../Doc/Pictures/edit_class.png)
- 
- Felhasználók listája (admin):
- 
- ![Felhasználók-listája-terv](../Doc/Pictures/home_page_logged.png)
  
  Felhasználók szerkesztése (admin):
  
