@@ -5,6 +5,17 @@ A rendszert teljes mértékben online formában kell megvalósítani, weblap ker
 A weblap teljes értékű kihasználásához szüksége lesz a felhasználónak regisztrálni. 
 Regisztráció nélkül semmilyen funkciót nem ér el, számára csak betekintő áll rendelkezésre.
 
+## 2. Jelenlegi helyzet
+
+Jelenleg az online és személyes oktatásnak is fontos szerepe van a tanulók és tanárok életében. Szinte már mindenkinek van okostelefonja és számítógépe otthon. 
+Ezek mellett pedig az internet az, ami körbe vesz minket. Manapság már nem meglepő az, ha van mobilinternete egyeseknek, sőt lassan már az lenne a meglepő, ha nem lenne. 
+Emiatt már nagyon kevés ember ül le az asztalához az iskola első hetében, hogy szépen kézzel megírja az órarendjét.
+Mellesleg ha valaki esetleg mégis ezt teszi, annak van egy nagy hátránya; nem minden esetben tudja elővenni azt a lapot, így nem tudja megnézni bármikor azt, hogy mikor, hogyan és hol lesznek az órái.
+Vannak akik telefonos alkalmazásokban tárolják az órarendjüket viszont mi történik ha elromlik a telefonjuk és nem kapcsol be?
+(Az esetek nagy részében ezek az alkalmazások nem rendelkeznek felhő alapú adatmentéssel mentéssel ha az alkalmazás ingyenes verzióját használjuk.) 
+Muszáj támogatnunk azokat, akik ebbe a problémába estek, így úgy gondoltuk, hogy csinálunk egy weboldalt, ahol minden egyes ember be tud regisztrálni és fel tudja tölteni az adatbázisba, hogy mettől-meddig, hol és milyen órája lesz. Ha elromlik a telefonunk, leülünk egy számítógéphez és betöltjük a weboldalt. 
+Bejelentkezünk és újra láthatjuk, módosíthatjuk, törölhetjük csodás óráinkat.
+
 ## 4. Funkcionális követelmények
 
 1. Bejelentkezési felület:
