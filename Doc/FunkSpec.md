@@ -7,7 +7,9 @@ A megrendelő szeretné jobban elérhetővé tenni a felhasználók órarendjén
 A megrendelő számára kiemelten fontos, hogy az oldal könnyen kezelhető és áttekinthető legyen. Ezért kért fel minket, hogy készítsünk számára egy weblapot, egy virtuális teret amely ezt a szándékát segíti.
 A teret egy online órarend formájában szeretné megvalósítani.
 Azt szeretné, ha az egyetemeken előforduló rengeteg tanórát egy helyre gyűjtenénk össze megspórolva rengeteg időt azoknak akik egyesével szeretnék leírni az órájuk összes információját.
-
+Az interneten már találni ehhez hasonló alkalmazásokat, blogokat de azt szeretné ha ez egy ingyenesen használható biztonságosabb hellyé válna olyan szempontból, hogy nem tűnnek el az adatok.
+Lehetőséget akar biztosítani, hogy az tanulók minden publikus információt megtudjanak tanáraikról, segítve ezzel a minél szélesebb tudás elsajátítását. A megrendelő felismerte azt, hogy manapság az embereknek szinte mindig van internetelérésük és eszközük ennek használatára.
+Ezt megragadva kérte, hogy készítsünk el egy olyan weblapot, ahol bármikor megtekinthetik órarendjüket és tanáruk elérhetőségeit.
 
 ## 3. Követelménylista
 
