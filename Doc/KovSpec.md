@@ -16,6 +16,13 @@ Vannak akik telefonos alkalmazásokban tárolják az órarendjüket viszont mi t
 Muszáj támogatnunk azokat, akik ebbe a problémába estek, így úgy gondoltuk, hogy csinálunk egy weboldalt, ahol minden egyes ember be tud regisztrálni és fel tudja tölteni az adatbázisba, hogy mettől-meddig, hol és milyen órája lesz. Ha elromlik a telefonunk, leülünk egy számítógéphez és betöltjük a weboldalt. 
 Bejelentkezünk és újra láthatjuk, módosíthatjuk, törölhetjük csodás óráinkat.
 
+## 3. Vágyálom rendszer 
+
+A projekt célja egy olyan felület biztosítása, ahol sokkal könnyebb elérni az órarendünket. A projekt csak webes felülettel rendelkezzen. Regisztráció nélkül csak a regisztáló felülettel rendelkezzen, ahol ha már regisztált valaki akkor be is tudjon jelentkezni.
+Miután létrehozta fiókját a felhasználó és bejelentkezett utána elérhetővé válnak a különböző opciók. Képes az órarend megtekintésére, szerkesztésére, törlésére. Hozzáfér az órát tartó személy adataihoz és megtekintheti azok elérhetőségét.
+A weblap maga egy letisztult oldal, könnyen kezelhető, mindenki számára egyértelmű működéssel bírjon. Az óra feltöltése esetben szükséges megadni a nevét, helyét, időpontját, tanár nevét.
+Szükség van egy magasabb szintű felhasználóra is, aki rendelkezik jogusoltságokkal a fiókok módosításához, órák törléséhez, módosításához, tanárok hozzáadásához és módosításához.
+
 ## 4. Funkcionális követelmények
 
 1. Bejelentkezési felület:
