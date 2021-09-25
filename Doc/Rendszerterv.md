@@ -26,6 +26,47 @@
 
 ## 5. Funkcionális terv
 
+**Rendszerszereplők:**
+  - **Adminisztrátor**
+  - **Felhasználó**
+  - **Vendég**
+
+  **Rendszerhasználati esetek és lefutásaik:**
+  - **Adminisztrátor**
+    - **Képes felhasználókat törölni**
+    - **Tudja módosítani a felhasználók jelszavát és adatait is**
+    - **Látja az összes regisztrált felhasználót**
+    - **Módosítani tudja a tárgyakat, azok adatait**
+    - **Teljes hozzáférése van a rendszerhez**
+  - **Felhasználó**
+    - **Megtekintheti a tárgyait**
+    - **Megtekintheti az órarendjét**
+    - **Felvehet új tárgyakat az órarendjébe**
+    - **Törölhet tárgyakat az órarendjéből**
+    - **Új tárgyakat tud felvenni**
+    - **Tárgyakat tud törölni**
+    - **Felvett tárgyainak tudja az adatait módosítani**
+    - **Módosíthatja a saját adatait**
+    - **Módosíthatja jelszavát**
+  - **Vendég**
+    - **Láthat egy generált órarendet minta képpen**
+    - **Képes regisztrálni és bejelentkezni**
+
+  - **Menü-hierarchiák:**
+    - **Bejelentkezés**
+    - **Regisztráció**
+    - **Betekintő**
+
+    - **Bejelentkezés után:**
+      - **Felhasználók listája:** kizárólag admin joggal rendelkező felhasználóknak
+
+      - **Profil**
+      - **Órarend**
+      - **Új tárgy felvétele**
+        - **Tárgy felvétele az órarendbe**
+        - **Tárgy törlése az órarendből**
+      - **Kijelentkezés**
+
 ## 6. Fizikai környezet
 
 - **Az alkalmazás csak web platformra készül, AWS EC2 instance-ra telepített Apache szerveren, MySQL adatbázissal lesz futtatva.**
