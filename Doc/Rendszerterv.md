@@ -59,6 +59,8 @@
 
     - **Bejelentkezés után:**
       - **Felhasználók listája:** kizárólag admin joggal rendelkező felhasználóknak
+        - **Felhasználó adatainak módosítása**
+        - **Felhasználók törlése**
 
       - **Profil**
       - **Órarend**
