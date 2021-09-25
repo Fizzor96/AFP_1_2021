@@ -33,3 +33,7 @@
 ## 11. Telepítési terv
 
 ## 12. Karbantartási terv
+
+A felhasználók egy report formájában tudják jelenteni a felmerűlő funkcionális hibákat az adminok felé, amit a fejlesztők fognak kijavítani.
+A javított hibák egy oldalon Changelog vagy hír formában meg fognak jelenni visszajelzésként a felhasználók felé, az új funkciók / frissítésekkel együtt.
+A karbantartási időkről a felhasználóknak egy e-mail formájában előre tájékoztatjuk.
