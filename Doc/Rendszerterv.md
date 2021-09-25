@@ -9,6 +9,21 @@
 
 ## 4. Követelmények
 
+**Funkcionális követelmények**
+  - **Felhasználók adatainak tárolása**
+  - **Felhasználók tudják változtatni adataikat**
+  - **Felhasználók órarendjének tárolása**
+  - **Tárgyak tárolása**
+  - **Tárgyakhoz tartozó adatok tárolása**
+  - **Adminisztrátor tudja szerkeszteni a tárgyak adatait és a felhasználók adatait**
+
+  **Nem funkcionális követelmények**
+  - **A felhasználók nem férnek hozzá egymás adataihoz**
+  - **A felhasználók nem férnek hozzá az admin felülethet**
+
+  **Törvényi előírások, szabványok:**
+  - **GDPR-nek való megfelelés**
+
 ## 5. Funkcionális terv
 
 ## 6. Fizikai környezet
