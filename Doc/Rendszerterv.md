@@ -1,6 +1,15 @@
-## 4. Üzleti folyamatok modellje
+## 1. Rendszer célja
+
+## 2. Projektterv
+
+
+## 3. Üzleti folyamatok modellje
 
 ![Üzleti folyamatok modellje](../Doc/Pictures/business_model.png)
+
+## 4. Követelmények
+
+## 5. Funkcionális terv
 
 ## 6. Fizikai környezet
 
@@ -13,4 +22,14 @@
     - **MySQL Workbench**
     - **HeidiSQL**
 
-## 7.Igényelt üzleti folyamatok modellje
+## 7. Architekturális terv
+
+## 8. Adatbázis terv
+
+## 9. Implementációs terv
+
+## 10. Tesztterv
+
+## 11. Telepítési terv
+
+## 12. Karbantartási terv
