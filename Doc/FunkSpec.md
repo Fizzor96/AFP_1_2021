@@ -30,7 +30,7 @@ Ezt megragadva kérte, hogy készítsünk el egy olyan weblapot, ahol bármikor 
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
-A mai világban az oktatási intézmények a meghirdetett tárgyakat nagyon rugalmasan kezelik, ezért gyakran változnak a kurzusok időpontjai, helyei és oktatói. Ezt a sok változást nem könnyű papíron vezetni, erre a problémára nyújt megoldást az órarend tervező webes alkalmazás. Könnyen lehet módosítani az órarendet, törölni vagy hozzáadni új kurzusokat.
+![Jelenlegi üzleti folyamatok modellje](../Doc/Pictures/functional_specifications_4.png)
 
 ## 5. Igényelt üzleti folyamatok modellje
     5.1 Bejelentkezés
