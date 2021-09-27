@@ -106,6 +106,8 @@ A weblap teljes mértékben ingyenes lesz, nincs semmi tartalom vagy extra funkc
 
 ## 7. Architekturális terv
 
+A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t használunk. A bootstrap mint CSS keretrendszer felel a reszponzív webdesign-ért. A backend php alapú.
+
 ## 8. Adatbázis terv
 ### **Táblák**
 - **felhasznalok:** Minden felhasználó, aki az oldalon regisztrált
@@ -163,11 +165,6 @@ Table "orarend" {
 **UML**
 
 ![database](../Doc/Pictures/Db_UML.png)
-
-## 7. Architekturális terv
-
-A rendszer tökéletes működéséhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t használunk. A bootstrap mint CSS keretrendszer felel a reszponzív webdesign-ért. A backend php alapú.
-
 
 ## 9. Implementációs terv
 
