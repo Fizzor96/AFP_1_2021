@@ -187,7 +187,12 @@ A weboldal helyes működésének letesztelése különböző böngészőkben p�
 
 ## 11. Telepítési terv
 
-
+A szoftver webes felületéhez csak egy böngésző telepítése szükséges.
+* Windows - Microsoft Edge
+* Linux - Mozilla
+* Mac - Safari
+A webszerverre közvetlenül az internetről kapcsolódnak rá a kliensek.
+A weboldal URL címét szükséges ismerni és ezt beírni a böngésző címsorába.
 
 ## 12. Karbantartási terv
 
