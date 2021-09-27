@@ -188,6 +188,7 @@ A szoftver webes felületéhez csak egy böngésző telepítése szükséges.
 * Windows - Microsoft Edge
 * Linux - Mozilla Firefox
 * Mac - Safari
+
 A webszerverre közvetlenül az internetről kapcsolódnak rá a kliensek.
 A weboldal URL címét szükséges ismerni és ezt beírni a böngésző címsorába.
 
