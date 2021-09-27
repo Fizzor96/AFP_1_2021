@@ -175,7 +175,13 @@ A webes felület HTML, CSS és PHP nyelven fog elkészülni. A különböző tec
 
 ## 10. Tesztterv
 
+Az alább leírt tesztelések célja a rendszer és funkcióinak teljes körű vizsgálata, ellenőrzése.
+
+
+
 ## 11. Telepítési terv
+
+
 
 ## 12. Karbantartási terv
 
