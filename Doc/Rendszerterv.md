@@ -124,7 +124,7 @@ A weblap teljes mértékben ingyenes lesz, nincs semmi tartalom vagy extra funkc
   - **tanarnev:** Az óraadó tanár neve
 
 - **orarend:**
-  - **id:** Az adott író azonosítója, nem lehet üres és automatikusan növekszik
+  - **id:** Az adott órarend azonosítója, nem lehet üres és automatikusan növekszik
   - **felhasznaloid:** A felhasználó id-je, nem lehet null
   - **oraid:** Az adott óra id-je, nem lehet null
 
