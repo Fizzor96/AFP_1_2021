@@ -107,6 +107,61 @@ A weblap teljes mértékben ingyenes lesz, nincs semmi tartalom vagy extra funkc
 ## 7. Architekturális terv
 
 ## 8. Adatbázis terv
+### **Táblák**
+- **felhasznalok:** Minden felhasználó, aki az oldalon regisztrált
+  - **id:** Azonosító szám, mindenképp felvesz egy egész típusú értéket, amit a rendszer automatikusan generál és egyesével növekszik, nem lehet két azonos szám
+  - **felhasznalonev:** A felhasználók regisztrációkor megadott neve, nem lehet üres
+  - **jelszo:** Nem lehet üres a mező, legalább 8 karakter
+  - **email:** Egyedi, tehát nem lehet két felhasználónak ugyanazon email címe és egyben nem lehet üres mező
+  - **jog:** Egész érték, nem lehet üres mező 
+
+
+- **ora:**
+  - **id:** Minden óra egyedi azanosítóval bír, automatikusan növekszik és nem lehet üres mező
+  - **nev:** Az óra neve, nem lehet üres mező
+  - **ido:** Az óra időpontja, nem lehet üres mező
+  - **nap:** Az óra napja, egész típusú, 1-5 közötti értékeket vehet fel
+  - **tanarnev:** Az óraadó tanár neve
+
+- **orarend:**
+  - **id:** Az adott író azonosítója, nem lehet üres és automatikusan növekszik
+  - **felhasznaloid:** A felhasználó id-je, nem lehet null
+  - **oraid:** Az adott óra id-je, nem lehet null
+
+**DSL**
+```
+Table "felhasznalok" {
+  "id" int(11) [pk, not null, increment]
+  "felhasznalonev" varchar(65) [not null]
+  "jelszo" varchar(65) [not null]
+  "email" varchar(65) [not null]
+  "jog" int(11) [not null]
+
+Indexes {
+  email [unique, name: "email"]
+}
+CONSTRAINT fk_felhasznaloid FOREIGN KEY(id) REFERENCES orarend(felhasznaloid)
+}
+
+Table "ora" {
+  "id" int(11) [pk, not null, increment]
+  "nev" varchar(255) [not null]
+  "ido" varchar(65) [not null]
+  "nap" varchar(65) [not null]
+  "tanarnev" varchar(65) [not null]
+
+  CONSTRAINT fk_oraid FOREIGN KEY(id) REFERENCES orarend(oraid)
+}
+
+Table "orarend" {
+  "id" int(11) [pk, not null, increment]
+  "felhasznaloid" int(11) [not null]
+  "oraid" int(11) [not null] 
+}
+
+```
+**UML**
+![database](../Doc/Pictures/Db_UML.png)
 
 ## 9. Implementációs terv
 
