@@ -164,6 +164,7 @@ Table "orarend" {
 
 ![database](../Doc/Pictures/Db_UML.png)
 
+## 7. Architekturális terv
 
 ## 9. Implementációs terv
 
