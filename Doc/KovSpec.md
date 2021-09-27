@@ -46,11 +46,21 @@ Opensource szoftver. Bárki által letölthető és felhasználható. Az érték
 
 ## 6. Jelenlegi üzleti folyamatok modellje
     6.1 Az órarend és tárgyak adatainak nyilvántartása
-        6.1.1 Új tárgy rögzítése: regisztrált felhasználó végzi -> Tárgy rendszerbe való rögzítése
-        6.1.2 Tárgy törlése: regisztrált felhasználó végzi -> Tárgy törlése a rendszerből
-        6.1.3 Meglévő tárgy órarendbe helyezése: regisztrált felhasználó végzi -> A felvett tárgy megjelenik az órarendben
-        6.1.4 Meglévő tárgy leadása órarendből: regisztrált felhasználó végzi -> Az adott tárgy eltűnik az órarendből
-        6.1.5 Tárgy adataiank szerkesztése: regisztrált felhasználó végzi -> Tárgy adatai módosulnak
+        6.1.1 Új tárgy rögzítése
+                - Regisztrált felhasználó végzi
+                - Tárgy rendszerbe való rögzítése
+        6.1.2 Tárgy törlése
+                - Regisztrált felhasználó végzi
+                - Tárgy törlése a rendszerből
+        6.1.3 Meglévő tárgy órarendbe helyezése
+                - Regisztrált felhasználó végzi
+                - A felvett tárgy megjelenik az órarendben
+        6.1.4 Meglévő tárgy leadása órarendből
+                - Regisztrált felhasználó végzi
+                - Az adott tárgy eltűnik az órarendből
+        6.1.5 Tárgy adataiank szerkesztése
+                - Regisztrált felhasználó végzi
+                - Tárgy adatai módosulnak
 
 ## 7. Igényelt üzleti folyamatok modellje
     7.1 Bejelentkezés
