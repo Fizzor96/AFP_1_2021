@@ -161,7 +161,9 @@ Table "orarend" {
 
 ```
 **UML**
+
 ![database](../Doc/Pictures/Db_UML.png)
+
 
 ## 9. Implementációs terv
 
