@@ -5,7 +5,27 @@ Regisztráció nékül ezen funkciók nem elérhetőek, a felhasználó csak bet
 A weblap része lesz egy felhasználó kezelő rendszer, ahol három különböző szint lesz, ezek a vendég, felhasználó és az admin.
 A weblap teljes mértékben ingyenes lesz, nincs semmi tartalom vagy extra funkció amiért fizetni kellene.
 ## 2. Projektterv
+### Projekttszerepkörök:
+  * Termék tulajdonos: WIP csapat
+### Projekttmunkások és felelősségek:
+  * Backend munkálatok: Csapat tagjai
+  * Frontend munkálatok: Csapat tagjai
 
+### Feladatuk: 
+- adatbázis létrehozása az adatok tárolásához
+- megfelelő funkciók elkészítése az oldal megfelelő működésének érdekében
+- felhasználói felület kialakítása
+- felhasználókezelés alkalmazása.
+
+### Ütemterv:
+ - Követelmény specifikáció
+ - Funkcionális specifikáció
+ - Rendszerterv
+ - Adatbázis kialakítása
+ - Felhasználókezelés megvalósítása
+ - Backend funkciók elkészítése
+ - Frontend design megtervezése
+ - Felhasználói felület kialakítása
 
 ## 3. Üzleti folyamatok modellje
 
