@@ -177,7 +177,13 @@ A webes felület HTML, CSS és PHP nyelven fog elkészülni. A különböző tec
 
 Az alább leírt tesztelések célja a rendszer és funkcióinak teljes körű vizsgálata, ellenőrzése.
 
-
+Gombok, linkek tesztelése: tesztünk célja: a weboldalon megjelenő gombok és linkek megfelelő működésének ellenőrzése.
+Adatrögzítések leeleenőrzése, hogy sikeresen feltöltődtek-e az adatbázisba. 
+Adatok betöltése az adatbázisból.
+Műveletek tesztelése: Törlés, módosítás, hozzáadás.
+A jelszavakkal biztonságos tárolásának ellenőrzése.
+Hibás, hiányos adatok esetén adott hibaüzenetek ellenőrzése.
+A weboldal helyes működésének letesztelése különböző böngészőkben például Microsoft Edge, Google Chrome, Firefox…
 
 ## 11. Telepítési terv
 
