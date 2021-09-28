@@ -1,5 +1,4 @@
 <?php
-require "../database.php";
 if(isset($_POST["in"]) && $_POST["name"]!=null && $_POST["place"] != null && $_POST["time"] != null && $_POST["prof"] != null)
 {
     if($_POST["name"]!="" && $_POST["place"] != "" && $_POST["time"] != "" && $_POST["prof"] != "")
