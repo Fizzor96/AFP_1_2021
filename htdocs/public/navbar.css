@@ -1,0 +1,85 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+ 
+}
+
+.logo {
+  color: #e9e9e9;
+  font-size: 20px;
+}
+
+.menuBar {
+  background-color: #2f2626;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  position: relative;
+}
+
+.menuBar ul 
+{
+  list-style: none;
+  display: flex;
+}
+
+.menuBar ul li 
+{
+  padding: 10px 20px;
+  position: relative;
+}
+
+.menuBar ul li a 
+{
+  font-size: 18px;
+  color: #e9e9e9;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.menuBar ul li a:hover 
+{
+  color: #c5aa6a;
+}
+
+.fa {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* legördülő menü */
+.dropdownMenu 
+{
+  display: none;
+}
+
+.menuBar ul li:hover .dropdownMenu 
+{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #2f2626;
+}
+
+.menuBar ul li:hover .dropdownMenu ul 
+{
+  display: block;
+  margin: 10px;
+}
+
+.menuBar ul li:hover .dropdownMenu ul li 
+{
+  width: 150px;
+  padding: 10px;
+}
