@@ -1,5 +1,5 @@
 <?php
-require "../database/database.php";
+require "../database.php";
 ?>
 <html>
 <body>
@@ -25,8 +25,6 @@ require "../database/database.php";
             <input type = "text" placeholder="Tanár neve">
         </td>
     </tr>
-
-
         <tr>
             <td>
                 <input type = "submit" value = beküldés> 
