@@ -18,14 +18,14 @@ A weblap teljes mértékben ingyenes lesz, nincs semmi tartalom vagy extra funkc
 - felhasználókezelés alkalmazása.
 
 ### Ütemterv:
- - Követelmény specifikáció
- - Funkcionális specifikáció
- - Rendszerterv
- - Adatbázis kialakítása
- - Felhasználókezelés megvalósítása
- - Backend funkciók elkészítése
- - Frontend design megtervezése
- - Felhasználói felület kialakítása
+ - 09.21 Követelmény specifikáció 
+ - 09.21 Funkcionális specifikáció
+ - 09.28 Rendszerterv
+ - 10.03 Adatbázis kialakítása
+ - 10.03 Felhasználókezelés megvalósítása
+ - 10.03 Backend funkciók elkészítése
+ - 10.05 Frontend design megtervezése
+ - 10.05 Felhasználói felület kialakítása
 
 ## 3. Üzleti folyamatok modellje
 
