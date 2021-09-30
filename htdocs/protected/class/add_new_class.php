@@ -26,8 +26,8 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && 
 </HEAD>
 
 <body>
-    <div class="registerDiv">
-        <table class="registerForm">
+    <div class="oDiv">
+        <table class="oForm">
             <form method='post' action=''>
                 <tr>
                     <td>
