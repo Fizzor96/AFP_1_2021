@@ -12,7 +12,7 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && 
         //az adatbázis tábla nevét majd át kell írni a valódira, meg lehet kell még ezen az sql-n alakítani mivel a nap is kellene
         //de valahogy így fog kinézni
 
-        $sql = "INSERT INTO targy (nev, hely, ora, tanar) VALUES ('" . $name . "', '" . $place . "', '" . $time . "', '" . $prof . "')";
+        $sql = "iNSERT INTO targy (nev, hely, ora, tanar) VALUES ('" . $name . "', '" . $place . "', '" . $time . "', '" . $prof . "')";
 
         executeQuery($sql);
     }
@@ -21,8 +21,8 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && 
 <html>
 
 <HEAD>
-    <link rel="stylesheet" href="<?php echo PUBLIC_DIR . "register.css"; ?>">
-    <link rel="stylesheet" href="../../public/register.css">
+        <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>">
+        <link rel="stylesheet" href="../../public/style.css">
 </HEAD>
 
 <body>
