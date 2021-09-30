@@ -8,4 +8,16 @@ function getConnection(){
     return $connection;
 }
 
+function executeQuery($query)
+{
+    $connection = getConnection();
+    if(mysqli_query($connection,$query))
+    {
+        echo "Sikeres művelet";
+    } else {
+        echo "Hiba";
+    }
+    mysqli_close($connection);
+}
+
 ?>
