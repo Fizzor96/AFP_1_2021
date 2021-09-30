@@ -22,8 +22,13 @@ if(isset($_POST["in"]) && $_POST["name"]!=null && $_POST["place"] != null && $_P
 }
 ?>
 <html>
+<HEAD>
+        <link rel="stylesheet" href="<?php echo PUBLIC_DIR."register.css";?>">
+        <link rel="stylesheet" href="../../public/register.css">
+    </HEAD>
 <body>
-    <table>
+<div class = "registerDiv">
+    <table class = "registerForm">
     <form method='post' action=''>
     <tr>
         <td>
@@ -54,5 +59,6 @@ if(isset($_POST["in"]) && $_POST["name"]!=null && $_POST["place"] != null && $_P
 
     </form>
     </table>
+</div>
 </body>
 </html>
