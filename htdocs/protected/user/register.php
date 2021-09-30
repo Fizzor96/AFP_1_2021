@@ -5,25 +5,31 @@
         <link rel="stylesheet" href="../../public/style.css">
     </HEAD>
     <BODY>
-        <div class = "registerDiv">
+        <div class = "oDiv">
             <form method = "POST">
-                <table class = "registerForm">
+                <table class = "oForm">
                     <tr>
                         <td>
                             <!--<p>Teljes név</p>-->
-                            <input type = "text" id = "register_fullname" placeholder = "Full name">
+                            <input type = "text" id = "register_fullname" placeholder = "Teljes név">
                         </td>
                     <tr>
                     <tr>
                         <td>
                             <!--<p>Felhasználónév</p>-->
-                            <input type = "text" id = "reg_username" placeholder = "Username">
+                            <input type = "text" id = "reg_username" placeholder = "Felhaszálónév">
                         </td>
                     <tr>
                     <tr>
                         <td>
                             <!--<p>Jelszó</p>-->
-                            <input type = "password" id = "reg_password" placeholder = "Password">
+                            <input type = "password" id = "reg_password" placeholder = "Jelszó">
+                        </td>
+                    <tr>
+                    <tr>
+                        <td>
+                            <!--<p>Jelszó</p>-->
+                            <input type = "password" id = "reg_password" placeholder = "Jelszó mégegyszer">
                         </td>
                     <tr>
                     <tr>
