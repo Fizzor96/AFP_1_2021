@@ -50,9 +50,7 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && 
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="submit" value="Beküldés" name="in">
-                    </td>
+                    <td colspan = 2><button>Feltöltés</button></td>
                 </tr>
 
 
