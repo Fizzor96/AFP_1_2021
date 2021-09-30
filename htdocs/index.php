@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require_once 'protected/config.php';
+require_once DATABASE_CONTROLLER;
 ?>
 <?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <!DOCTYPE html>
