@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="<?php echo PUBLIC_DIR."navbar.css";?>">
+    <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>">
 
     
     <div class="menuBar">
