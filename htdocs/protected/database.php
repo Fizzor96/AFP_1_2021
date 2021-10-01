@@ -28,6 +28,8 @@ function classList($query)
     $result = $statement->get_result();
     $row = $result->fetch_assoc();
 
+    mysqli_close($connection);
+
     return $row;
 
 }
