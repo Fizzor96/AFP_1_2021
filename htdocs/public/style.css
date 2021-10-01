@@ -159,16 +159,16 @@ body {
     text-transform: uppercase;
     font-weight: 900;
 }
-.oDiv .oForm .loginText span
+.oDiv .oForm .oText span, .oDiv .oForm .oText span
 {
   color: #c5aa6a;
   transition: 0.3s all ease;
 }
-.oDiv .oForm .loginText span:hover
+.oDiv .oForm .oText span:hover
 {
   color: #e6c67b;
 }
-.oDiv .oForm .loginText a
+.oDiv .oForm .oText a
 {
     text-decoration: none;
     letter-spacing: 1px;
@@ -186,6 +186,7 @@ body {
   color: rgb(20, 20, 20);
   border: 1px solid rgba(0, 0, 0, 0.5);
   transition: 0.2s all ease-in-out;
+  width: 150px;
 }
 .oDiv .oForm button:hover
 {
