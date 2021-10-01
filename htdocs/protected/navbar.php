@@ -17,6 +17,7 @@
                 </ul>
               </div>
         </li>
+        <li><a href="index.php?P=logout">Kijelentkezés</a></li>
         
       </ul>
     </div>
