@@ -20,4 +20,15 @@ function executeQuery($query)
     mysqli_close($connection);
 }
 
+function classList($query)
+{
+    $connection = getConnection()
+    $statement = $connection->prepare($query);
+    $statement -> execute();
+    $result = $statement->get_result();
+    $row = $result->fetch_assoc();
+
+    return $row;
+
+}
 ?>
