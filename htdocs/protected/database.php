@@ -28,8 +28,11 @@ function classList($query)
     $result = [];
     if($success === TRUE)
     {
-        $temp = $statement->get_result();
-        $result = $temp->fetch_assoc();
+        $idk = $statement->get_result();
+        while($temp = $idk->fetch_assoc())
+        {
+            $result[]=$temp;
+        }
     }
     else{
         die('Sikertelen végrehajtás');
