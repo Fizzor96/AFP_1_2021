@@ -14,6 +14,8 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && 
 
         $sql = "iNSERT INTO targy (nev, hely, ora, tanar) VALUES ('" . $name . "', '" . $place . "', '" . $time . "', '" . $prof . "')";
 
+        //insert into ora( nev, ido, nap, hely, tanarnev) VALUES ("Algo2","08:00-10:00","2","C:104","Geda Gábor");
+        
         executeQuery($sql);
     }
 }
@@ -36,12 +38,37 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && 
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" placeholder="Óra helye" name="place">
+                        <span> Óra helye: </span><br>
+                        <select name="building" placeholder="Épület">
+                        <option value="" disabled selected hidden>Épület</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="C*">C*</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        </select> <br>
+                        <input type="number" min=1 max=400 placeholder="Terem száma" name="room"> <!-- Az óra helyét úgy kapod meg, hogy nézed a select value-jét, hozzá fűzöl egy :-ot és utána hozzá fűzöd ezt a terem számát-->
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" placeholder="Időpont" name="time">
+                        <span> Óra időpontja: </span><br>
+                        <select name="date">
+                        <option value="1">Hétfő</option>
+                        <option value="2">Kedd</option>
+                        <option value="3">Szerda</option>
+                        <option value="4">Csütörtök</option>
+                        <option value="5">Péntek</option>
+                        </select>
+                        <select name="time">
+                        <option value="8:00-10:00">8:00-10:00</option>
+                        <option value="10:00-12:00">10:00-12:00</option>
+                        <option value="12:00-14:00">12:00-14:00</option>
+                        <option value="14:00-16:00">14:00-16:00</option>
+                        <option value="16:00-18:00">16:00-18:00</option>
+                        <option value="18:00-20:00">18:00-20:00</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
