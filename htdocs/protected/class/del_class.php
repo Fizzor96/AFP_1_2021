@@ -4,7 +4,7 @@
 
 <?php 
 
-$query = "SELECT o.id, o.nev FROM ora o, felhasznalok_ora f WHERE " . $_SESSION["uid"] . " = f.felhasznaloid AND f.oraid=o.id";
+$query = "SELECT o.id, o.nev FROM ora o, orarend f WHERE f.felhasznaloid=1  AND f.oraid=o.id";
 
 $result = classList($query);
 

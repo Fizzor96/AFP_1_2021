@@ -23,14 +23,23 @@ function executeQuery($query)
 function classList($query)
 {
     $connection = getConnection();
-    $statement = $connection->prepare($query);
-    $statement -> execute();
-    $result = $statement->get_result();
-    $row = $result->fetch_assoc();
+    $statement = mysqli_prepare($connection,$query);
+    $success = mysqli_stmt_execute($statement);
+    $result = [];
+    if($success === TRUE)
+    {
+        $temp = $statement->get_result();
+        $result = $temp->fetch_assoc();
+    }
+    else{
+        die('Sikertelen végrehajtás');
+    }
+    
+    mysqli_stmt_close($statement);
 
     mysqli_close($connection);
 
-    return $row;
+    return $result;
 
 }
 ?>
