@@ -141,9 +141,9 @@ body {
     border-bottom: 3px solid #32cd32;
     outline: 0
 }
-input:placeholder-shown
+.oDiv .oForm input:not(:placeholder-shown)
 {
-    border-bottom: 3px solid #32cd32;
+    border-bottom: 3px solid #2a962a;
     outline: 0
 }
 .oDiv .oForm input::placeholder
@@ -161,5 +161,36 @@ input:placeholder-shown
 }
 .oDiv .oForm .loginText span
 {
-    color: rgb(252, 150, 167);
+  color: #c5aa6a;
+  transition: 0.3s all ease;
+}
+.oDiv .oForm .loginText span:hover
+{
+  color: #e6c67b;
+}
+.oDiv .oForm .loginText a
+{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+#alertText
+{
+  letter-spacing: 2px; 
+  font-weight: 600; 
+  font-size: 16px;
+}
+.oDiv .oForm button
+{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(20, 20, 20);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  transition: 0.2s all ease-in-out;
+}
+.oDiv .oForm button:hover
+{
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #F0F0F0;
+  letter-spacing: 0.8px;
+  color: #F0F0F0;
 }
