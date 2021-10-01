@@ -45,4 +45,13 @@ function classList($query)
     return $result;
 
 }
+function isUserLoggedIn() 
+{
+	return $_SESSION  != null && array_key_exists('uid', $_SESSION) && is_numeric($_SESSION['uid']);
+}
+function userLogout() {
+	session_unset();
+	session_destroy();
+	header('Location: index.php?P=login');
+}
 ?>
