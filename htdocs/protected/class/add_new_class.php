@@ -3,7 +3,7 @@
 require_once DATABASE_CONTROLLER;
 
 if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["building"] != null && $_POST["room"] != null && $_POST["date"] != null && $_POST["time"] != null && $_POST["prof"] != null) {
-    if ($_POST["name"] != "" && $_POST["building"] != "" $_POST["room"] != "" && $_POST["date"] != "" && $_POST["time"] != "" && $_POST["prof"] != "") {
+    if ($_POST["name"] != "" && $_POST["building"] != "" && $_POST["room"] != "" && $_POST["date"] != "" && $_POST["time"] != "" && $_POST["prof"] != "") {
         $name = $_POST["name"];
         $building = $_POST["building"];
         $room = $_POST["room"];
