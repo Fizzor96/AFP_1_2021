@@ -29,7 +29,7 @@
                         <td><i class="fa fa-user"></i></td>
                         <td>
                         
-                        <input type = "text" id = "reg_username" name = "reg_username" placeholder = "Felhaszálónév">
+                        <input type = "text" id = "reg_username" name = "reg_username" placeholder = "Felhasználónév">
                         </td>
                     <tr>
                     <tr><td><i class="fa fa-key"></i></td>
@@ -47,7 +47,7 @@
                             <input type = "email" id = "reg_email" name = "reg_email" placeholder = "Email">
                         </td>
                     <tr>
-                    <tr class = "loginText">
+                    <tr class = "oText">
                         <td colspan = 2>Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a></td>
                     <tr>
                     <tr>
