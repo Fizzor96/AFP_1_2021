@@ -22,7 +22,7 @@ function executeQuery($query)
 
 function classList($query)
 {
-    $connection = getConnection()
+    $connection = getConnection();
     $statement = $connection->prepare($query);
     $statement -> execute();
     $result = $statement->get_result();

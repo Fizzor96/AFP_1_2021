@@ -11,4 +11,5 @@ $result = classList($query);
 ?>
 
 <?php if($result === NULL || empty($result)): ?>
-    
+    <p>Nincs rekord</p>
+<?php endif; ?>
