@@ -2,17 +2,20 @@
 
 require_once DATABASE_CONTROLLER;
 
-if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["place"] != null && $_POST["time"] != null && $_POST["prof"] != null) {
-    if ($_POST["name"] != "" && $_POST["place"] != "" && $_POST["time"] != "" && $_POST["prof"] != "") {
+if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["building"] != null && $_POST["room"] != null && $_POST["date"] != null && $_POST["time"] != null && $_POST["prof"] != null) {
+    if ($_POST["name"] != "" && $_POST["building"] != "" $_POST["room"] != "" && $_POST["date"] != "" && && $_POST["time"] != "" && $_POST["prof"] != "") {
         $name = $_POST["name"];
-        $place = $_POST["place"];
+        $building = $_POST["building"];
+        $room = $_POST["room"];
+        $date = $_POST["date"];
         $time = $_POST["time"];
         $prof = $_POST["prof"];
+        $place = $building . ":" . $room;
 
         //az adatbázis tábla nevét majd át kell írni a valódira, meg lehet kell még ezen az sql-n alakítani mivel a nap is kellene
-        //de valahogy így fog kinézni
+        //nincs még tesztelve, hogy működik vagy sem
 
-        $sql = "iNSERT INTO targy (nev, hely, ora, tanar) VALUES ('" . $name . "', '" . $place . "', '" . $time . "', '" . $prof . "')";
+        $sql = "iNSERT INTO ora (nev, ido, nap, hely, tanarnev) VALUES ('" . $name . "', '" . $time . "', '" . $date . "', '" . $place . "', '" . $prof . "')";
 
         //insert into ora( nev, ido, nap, hely, tanarnev) VALUES ("Algo2","08:00-10:00","2","C:104","Geda Gábor");
         
