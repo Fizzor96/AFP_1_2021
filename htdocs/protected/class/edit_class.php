@@ -2,6 +2,8 @@
     <HEAD>
         <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>">
         <link rel="stylesheet" href="../../public/style.css">
+        <link rel="stylesheet" href="<?php echo PUBLIC_DIR."bootstrap.css";?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </HEAD>
 
     <BODY>
