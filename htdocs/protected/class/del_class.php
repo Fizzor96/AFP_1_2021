@@ -13,6 +13,7 @@ $result = classList($query);
     <p>Nincs rekord</p>
     <?php else: ?>
         <table>
+        <form method="post">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -25,10 +26,11 @@ $result = classList($query);
                         <tr>
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
-                            <td><a href="">Töröl</a></td>
+                            <td><a name = <?=$_SESSION["uid"]?> >Töröl</a></td>
                         </tr>
                     <?php endforeach;?>
             </tbody>
+            </form>
         </table>
 <?php endif; ?>
 
