@@ -1,26 +1,59 @@
-    <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>">
+    <HTML>
+    <head>
+        <style>
+          .navbar-brand
+          {
+            color: #FFF !important;
+          }
+          .navbar-brand span *
+          {
+            text-decoration: none !important;
+            color: #e9e9e9 !important;
+            transition: 0.2s ease all !important;
+          }
+        </style>
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Órarend</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    
-    <div class="menuBar">
-      <h1 class="logo"><?php  echo ($_SESSION["uid"]? 'Üdvözöljük, <a href="index.php?P=edit_user">'.$_SESSION["felhasznalonev"].'</a>' : 'Jelenetkezzen be!'); ?></h1>
-      <ul>
-        <?php if($_SESSION["uid"] == NULL): ?>
-        <li><a href="index.php?P=login">Bejelentkezés</a></li>
-        <li><a href="index.php?P=register">Regisztráció</a></li>
-        <li><a href="index.php?P=betekinto">Betekintő</a></li>
-        <?php else: ?>
-        <li><a href="index.php?P=orarend">Órarend     <i class="fa fa-caret-down"></i></a>
-            <div class="dropdownMenu">
-                <ul>
-                  <li><a href="index.php?P=addNewClass">Új tárgy</a></li>
-                  <li><a href="index.php?P=addToTimeTable">Tárgy felvétel</a></li>
-                  <li><a href="index.php?P=deleteFromTimeTable">Tárgy törlés</a></li>
-                </ul>
-              </div>
-        </li>
-        <li><a href="index.php?P=logout">Kijelentkezés</a></li>
-        <?php endif; ?>
-      </ul>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="index.php?P=home">Kezdőlap</a>
+      </li>
+    <?php if($_SESSION["uid"] == NULL): ?>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=login">Bejelentkezés</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=register">Regisztráció</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=betekinto">Betekintő</a>
+      </li>
+      <?php else: ?>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=orarend">Órarend</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=listClass">Tárgyak</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=edit_user">Adataim</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
+      </li>
+      <?php endif; ?>
+    </ul>
+  </div>
+</nav>
+  
+    </body>
+</html>
         
     
