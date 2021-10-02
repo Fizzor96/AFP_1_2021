@@ -13,6 +13,7 @@ $result = classList($query);
     <p>Nincs rekord</p>
     <?php else: ?>
         <table>
+        <form method="post">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -29,6 +30,7 @@ $result = classList($query);
                         </tr>
                     <?php endforeach;?>
             </tbody>
+            </form>
         </table>
 <?php endif; ?>
 
