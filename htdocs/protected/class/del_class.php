@@ -1,6 +1,6 @@
 <br/>
+<div class="container">
 
-<h2>Tárgyak listája</2>
 
 <?php 
 
@@ -30,13 +30,15 @@ if (isset($_POST["del"]))
 <?php if($result === NULL || empty($result)): ?>
     <p>Nincs rekord</p>
     <?php else: ?>
-        <table>
+        
+        <h2>Tárgyak listája</2>
+        <table class="table table-bordered table-dark text-center">
         <form method="post">
             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Név</th>
-                    <th>Műveletek</th>
+                <tr scope="row">
+                    <th scope="col">ID</th>
+                    <th scope="col">Név</th>
+                    <th scope="col" colspan=2>Műveletek</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,14 +47,15 @@ if (isset($_POST["del"]))
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
                             <?php if($_SESSION['jog'] == 1):?>
-                            <td><button name = "edit" value =<?= $row['id']?>>Módosít</button></td>
+                            <td><button class="btn btn-dark" name = "edit" value =<?= $row['id']?>>Módosít</button></td>
                             <?php endif; ?>
-                            <td><button name = "del" value =<?= $row['id']?>>Törlés</button></td>
+                            <td><button class="btn btn-dark" name = "del" value =<?= $row['id']?>>Törlés</button></td>
                         </tr>
                     <?php endforeach;?>
             </tbody>
             </form>
         </table>
+                            </div>
 <?php endif; ?>
 
 <?php
