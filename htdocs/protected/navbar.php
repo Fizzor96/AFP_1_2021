@@ -9,7 +9,7 @@
         <li><a href="index.php?P=register">Regisztráció</a></li>
         <li><a href="index.php?P=betekinto">Betekintő</a></li>
         <?php else: ?>
-        <li><a href="#">Órarend     <i class="fa fa-caret-down"></i></a>
+        <li><a href="index.php?P=orarend">Órarend     <i class="fa fa-caret-down"></i></a>
             <div class="dropdownMenu">
                 <ul>
                   <li><a href="index.php?P=addNewClass">Új tárgy</a></li>
