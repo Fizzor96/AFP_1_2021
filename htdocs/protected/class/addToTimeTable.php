@@ -12,7 +12,7 @@ $result = classList($query);
 
 if (isset($_POST["add"]))
    {
-       $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . " AND felhasznaloid = " . $_SESSION["uid"];
+       $query2 = "INSERT INTO felhasznalok_ora (felhasznaloid, oraid) VALUES (" . $_SESSION["uid"] . "," . $_POST["add"] . ")";
 
        
        executeQuery($query2);
@@ -23,14 +23,11 @@ if (isset($_POST["add"]))
    }
 
 
-   if(isset($_POST["edit"]))
-   {
-       header("Location:index.php?P=edit_class&G=".$_POST["edit"]);
-   }
+  
 ?>
 
 <?php if($result === NULL || empty($result)): ?>
-    <p>Nincs rekord</p>
+    <p>Nincs felvehető tárgy</p>
     <?php else: ?>
         
         <h2>Tárgyak listája</2>
