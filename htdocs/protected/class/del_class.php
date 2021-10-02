@@ -21,13 +21,12 @@ if (isset($_POST["del"]))
       // var_dump($query2);
       
    }
-   var_dump($query2);
+   //var_dump($query2);
 
 
    if(isset($_POST["edit"]))
    {
-       $editValue = $_POST["edit"];
-       //header();
+       header("Location:http://localhost/AFP_1_2021_Short/htdocs/index.php?P=edit_class&G=".$_POST["edit"]);
    }
 ?>
 

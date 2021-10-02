@@ -33,7 +33,7 @@
                 <span id = "alertText"></span>
                 <div class="form-group">
                     <label for="nev">Óra név: </label>
-                    <input type="text" class="form-control" value="<?=$_['nev']?>"  name="nev" id="nev" maxlength="255"/> <br/>
+                    <input type="text" class="form-control"  name="nev" id="nev" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="ido">Időpont: </label>
