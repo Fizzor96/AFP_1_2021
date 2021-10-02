@@ -1,6 +1,7 @@
 <HTML>
     <HEAD>
-
+        <link rel="stylesheet" href="<?php echo PUBLIC_DIR."style.css";?>">
+        <link rel="stylesheet" href="../../public/style.css">
     </HEAD>
 
     <BODY>
