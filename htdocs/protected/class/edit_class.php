@@ -33,7 +33,7 @@
                 <span id = "alertText"></span>
                 <div class="form-group">
                     <label for="nev">Óra név: </label>
-                    <input type="text" class="form-control"  name="nev" id="nev" maxlength="255"/> <br/>
+                    <input type="text" class="form-control" name="nev" id="nev" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="ido">Időpont: </label>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label for="nap">Nap: </label>
-                    <select name="date">
+                    <select name="nap">
                         <option value="1">Hétfő</option>
                         <option value="2">Kedd</option>
                         <option value="3">Szerda</option>
@@ -73,5 +73,35 @@
 
 <?php 
 
+function get_g(){
+    if(!filter_has_var(INPUT_GET, 'G')){
+        die('Helytelen paraméter!');
+    }
+    $id = filter_input(INPUT_GET, 'G', FILTER_VALIDATE_INT);
+    if($id === false){
+        die('Helytelen paraméter!');
+    }
+    return $id;
+}
 
+if(isset($_POST["submit"]))
+{
+    if($_POST["hely"] == "") echo "<script>alertText('alertText','Az óra helye nem lehet üres!','error')</script>";
+    else if($_POST["tanarnev"] == "") echo "<script>alertText('alertText','A tanár neve nem lehet üres!','error')</script>";
+    else
+    {
+        echo "<script>alertText('alertText','Sikeres adatváltoztatás!','success')</script>";
+        $id = get_g();
+        $nev = $_POST["nev"];
+        $ido = $_POST["ido"];
+        $nap = $_POST["nap"];
+        $hely = $_POST["hely"];
+        $tanarnev = $_POST["tanarnev"];
+        $email = $_POST["email"];
+        #$updateQuery = "UPDATE felhasznalok SET jelszo='".$passwd."', email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
+        $updateQuery = "UPDATE ora SET nev='".$nev."', ido='".$ido."', nap='".$nap."', hely='".$hely."', tanarnev='".$tanarnev."' WHERE id =".$id."";
+        var_dump($updateQuery);
+        executeQuery($updateQuery);
+    }
+}
 ?>
