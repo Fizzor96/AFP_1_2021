@@ -19,43 +19,42 @@
         </script>
     </HEAD>
     <BODY>
-        <div class = "oDiv">
-            <form method = "POST">
-                <table class = "oForm">
-                    <tr>
-                        <td colspan = 2><span id = "alertText"></span></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-user"></i></td>
-                        <td>
-                        
-                        <input type = "text" id = "reg_username" name = "reg_username" placeholder = "Felhasználónév">
-                        </td>
-                    <tr>
-                    <tr><td><i class="fa fa-key"></i></td>
-                        <td>
-                            <input type = "password" id = "reg_password" name = "reg_password" placeholder = "Jelszó">
-                        </td>
-                    <tr>
-                    <tr><td><i class="fa fa-key"></i></td>
-                        <td>
-                            <input type = "password" id = "reg_password_again" name = "reg_password_again" placeholder = "Jelszó mégegyszer">
-                        </td>
-                    <tr>
-                    <tr><td><i class="fa fa-envelope"></i></td>
-                        <td>
-                            <input type = "email" id = "reg_email" name = "reg_email" placeholder = "Email">
-                        </td>
-                    <tr>
-                    <tr class = "oText">
-                        <td colspan = 2>Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a></td>
-                    <tr>
-                    <tr>
-                        <td colspan = 2><button name = "registerBtn" type = "submit">Regisztráció</button></td>
-                    <tr>
-                </table>
-            </form>
+        <form method = "POST">
+            <div class="simple-container">
+        <h2>Regisztráció</h2>
+        <span id = "alertText"></span>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="text" class="form-control" placeholder="Fehasználónév" name = "reg_username">
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="password" placeholder="Jelszó" class="form-control" name = "reg_password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="password" placeholder="Jelszó újra" class="form-control" name = "reg_password_again">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="email" placeholder="Email" class="form-control" name = "reg_email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                Már van felhasználód? <a href = "index.php?P=login"><span>Kattints ide!</span><a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="submit" class="btn btn-block btn-login" name = "registerBtn" value = "Regisztrálás">
+            </div>
+        </div>
+        </div>
+        </form>
     </BODY>
 </HTML>
 <?php

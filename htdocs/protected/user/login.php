@@ -10,44 +10,49 @@
                 padding-top: 130px;
                 color: #F0F0F0;
             }
+            #alertText
+{
+  text-align: center;
+}
         </style>
     </HEAD>
     <BODY>
-        <div class = "oDiv">
+        
+            <div class="simple-container">
             <form method = "POST">
-                <table class = "oForm">
-                    <tr>
-                        <td colspan = 2><span id = "alertText"></span></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa fa-user"></i></td>
-                        <td>
-                        
-                        <input type = "text" id = "log_username" name = "log_username" placeholder = "Felhasználónév">
-                        </td>
-                    <tr>
-                    <tr><td><i class="fa fa-key"></i></td>
-                        <td>
-                            <input type = "password" id = "log_password" name = "log_password" placeholder = "Jelszó">
-                        </td>
-                    <tr>
-                    <tr class = "oText">
-                        <td colspan = 2>Még nincs felhasználód? <a href = "index.php?P=register"><span>Kattints ide!</span><a></td>
-                    <tr>
-                    <tr>
-                        <td colspan = 2><button name = "loginBtn" type = "submit">Bejelentkezés</button></td>
-                    <tr>
-                </table>
-            </form>
+        <h2>Bejelentkezés</h2>
+        <span id = "alertText"></span>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="text" class="form-control" placeholder="Fehasználónév" name = "log_username">
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="password" placeholder="Jelszó" class="form-control" name = "log_password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                Már van felhasználód? <a href = "index.php?P=register"><span>Kattints ide!</span><a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="submit" class="btn btn-block btn-login" name = "loginBtn" value = "Belépés">
+            </div>
+        </div>
+        </form>
+        </div>
+        
     </BODY>
 </HTML>
 <?php
 
 if(isset($_POST["loginBtn"]))
 {
-    if($_POST["log_username"] == "") echo "<script>alertText('alertText','A felhasználónév mező nem lehet üres!','error')</script>";
-    else if($_POST["log_password"] == "") echo "<script>alertText('alertText','A jelszó mező nem lehet üres!','error')</script>";
+    if($_POST["log_username"] == "") echo "<script>alertText('alertText','Írja be a felhasználónevet!','error')</script>";
+    else if($_POST["log_password"] == "") echo "<script>alertText('alertText','Írja be a jelszót!','error')</script>";
     else
     {
         $uname = $_POST["log_username"];
