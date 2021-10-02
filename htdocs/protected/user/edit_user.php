@@ -76,7 +76,7 @@ if(isset($_POST["submit"]))
         $ifNotExists = classList($checkQuery);
         if($ifNotExists === NULL || empty($ifNotExists))
         {
-            echo "<script>alertText('alertText','Sikeres regisztráció!','success')</script>";
+            echo "<script>alertText('alertText','Sikeres adatváltoztatás!','success')</script>";
         
             $passwd = sha1($_POST["jelszo"]);
             $email = $_POST["email"];
