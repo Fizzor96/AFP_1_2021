@@ -26,6 +26,7 @@
     </HEAD>
 
     <BODY>
+        <br>
         <div class="container">
             <h2>Felhasználó szerkesztése</h2>
             <form action="" method="POST" accept-charset="UTF-8">
