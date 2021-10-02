@@ -40,16 +40,26 @@
         <a class="nav-link" href="index.php?P=orarend">Órarend</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="index.php?P=addClass">Tárgy felvétel</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="index.php?P=listClass">Felvett tárgyak</a>
       </li>
+      
+      <?php if($_SESSION["jog"] == 1): ?>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Admin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="index.php?P=listUser">Felhasználók szerkesztése</a>
+          <a class="dropdown-item" href="index.php?P=addNewClass">Új tárgy rögzítése</a>
+        </div>
+      </li>
+      <?php endif; ?>
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=edit_user">Adataim</a>
       </li>
-      <?php if($_SESSION["jog"] == 1): ?>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?P=admin">Admin</a>
-      </li>
-      <?php endif; ?>
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
       </li>

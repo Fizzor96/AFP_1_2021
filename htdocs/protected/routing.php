@@ -12,7 +12,7 @@ if(!array_key_exists('P', $_GET) || empty($_GET['P']))
 			break;
 		
         case 'addNewClass': 
-			isUserLoggedIn() ? require_once PROTECTED_DIR.'class/add_new_class.php' : header('Location: index.php');
+			isUserLoggedIn() && $_SESSION['jog'] == 1 ? require_once PROTECTED_DIR.'class/add_new_class.php' : header('Location: index.php');
 			break;
 		
 		case 'listClass': 
@@ -21,8 +21,8 @@ if(!array_key_exists('P', $_GET) || empty($_GET['P']))
 		case 'addToTimeTable': 
 			isUserLoggedIn() ? require_once PROTECTED_DIR.'class/addToTimeTable.php' : header('Location: index.php');
 			break;
-		case 'admin': 
-			isUserLoggedIn() && $_SESSION['jog'] == 1 ? require_once PROTECTED_DIR.'admin/admin.php' : header('Location: index.php');
+		case 'listUser': 
+			isUserLoggedIn() && $_SESSION['jog'] == 1 ? require_once PROTECTED_DIR.'admin/listUser.php' : header('Location: index.php');
 			break;
 		case 'home': 
 			require_once PROTECTED_DIR.'home.php';;
