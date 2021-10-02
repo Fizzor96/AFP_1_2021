@@ -1,6 +1,6 @@
 <br/>
 
-<h2>Felhasználók listája</2>
+<h2>Tárgyak listája</2>
 
 <?php 
 
@@ -12,21 +12,18 @@ if (isset($_POST["del"]))
    {
        $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . " AND felhasznaloid = " . $_SESSION["uid"];
 
-       //var_dump($query2);
+       
+       executeQuery($query2);
+       header("Refresh:0");
 
-       //executeQuery($query2);
-       //header("Refresh:0");
 
-
-      // var_dump($query2);
       
    }
-   //var_dump($query2);
 
 
    if(isset($_POST["edit"]))
    {
-       header("Location:http://localhost/AFP_1_2021_Short/htdocs/index.php?P=edit_class&G=".$_POST["edit"]);
+       header("Location:index.php?P=edit_class&G=".$_POST["edit"]);
    }
 ?>
 
