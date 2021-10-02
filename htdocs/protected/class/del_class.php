@@ -10,11 +10,15 @@ $result = classList($query);
 
 if (isset($_POST["del"]))
    {
-       $query2= "DELETE FROM ora WHERE id=" . $_POST["del"];
+       $query2 = "DELETE FROM ora WHERE id = " . $_POST["del"];
+
+       var_dump($query2);
 
        executeQuery($query2);
+       //header("Refresh:0");
 
-       header("Refresh:0");
+
+       var_dump($query2);
       
    }
 ?>
