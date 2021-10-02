@@ -32,23 +32,23 @@
                 <input type="hidden" name="id" value=<?= $_SESSION["uid"] ?> >
                 <div class="form-group">
                     <label for="felhasznalonev">Felhasználónév: </label>
-                    <input type="text" class="form-control" name="felhasznalonev" required="required" id="felhasznalonev" maxlength="255"/> <br/>
+                    <input type="text" class="form-control"  name="felhasznalonev" id="felhasznalonev" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="jelszo">Jelszó: </label>
-                    <input type="password" class="form-control" name="jelszo" required="required" id="jelszo" maxlength="255"/> <br/>
+                    <input type="password" class="form-control" name="jelszo" id="jelszo" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="jelszo_megerosites">Jelszó megerősítése: </label>
-                    <input type="password" class="form-control" name="jelszo_megerosites" required="required" id="jelszo_megerosites" maxlength="255"/> <br/>
+                    <input type="password" class="form-control" name="jelszo_megerosites"  id="jelszo_megerosites" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail cím: </label>
-                    <input type="email" class="form-control" name="email" required="required" id="email" maxlength="255"/> <br/>
+                    <input type="email" class="form-control" name="email"  id="email" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="email_megerosites">E-mail cím megerősítése: </label>
-                    <input type="email" class="form-control" name="email_megerosites" required="required" id="email_megerosites" maxlength="255"/> <br/>
+                    <input type="email" class="form-control" name="email_megerosites" id="email_megerosites" maxlength="255"/> <br/>
                 </div>
                 <button type="submit" name="submit" >Mentés </button>
             </form>
