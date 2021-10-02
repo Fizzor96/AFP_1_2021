@@ -2,7 +2,7 @@
 
     
     <div class="menuBar">
-      <h1 class="logo"><?php  echo ($_SESSION["uid"]? 'Üdvözöljük, '.$_SESSION["felhasznalonev"].'' : 'Jelenetkezzen be!'); ?></h1>
+      <h1 class="logo"><?php  echo ($_SESSION["uid"]? 'Üdvözöljük, <a href="index.php?P=edit_user">'.$_SESSION["felhasznalonev"].'</a>' : 'Jelenetkezzen be!'); ?></h1>
       <ul>
         <?php if($_SESSION["uid"] == NULL): ?>
         <li><a href="index.php?P=login">Bejelentkezés</a></li>
