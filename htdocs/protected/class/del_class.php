@@ -1,5 +1,6 @@
 <br/>
-<div class="container">
+
+<div class="container-fluid">
 
 
 <?php 
@@ -32,7 +33,7 @@ if (isset($_POST["del"]))
     <?php else: ?>
         
         <h2>Tárgyak listája</2>
-        <table class="table table-bordered table-dark text-center">
+        <table class="table table-sm table-dark text-center ">
         <form method="post">
             <thead>
                 <tr scope="row">
@@ -43,7 +44,7 @@ if (isset($_POST["del"]))
             </thead>
             <tbody>
                     <?php foreach($result as $row): ?>
-                        <tr>
+                        <tr scope="row">
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
                             <?php if($_SESSION['jog'] == 1):?>
