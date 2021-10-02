@@ -25,7 +25,7 @@ $result = classList($query);
                         <tr>
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
-                            <td><a href="">Töröl</a></td>
+                            <td><a name = <?=$_SESSION["uid"]?> >Töröl</a></td>
                         </tr>
                     <?php endforeach;?>
             </tbody>
