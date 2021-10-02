@@ -40,11 +40,16 @@
         <a class="nav-link" href="index.php?P=orarend">Órarend</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?P=listClass">Tárgyak</a>
+        <a class="nav-link" href="index.php?P=listClass">Felvett tárgyak</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=edit_user">Adataim</a>
       </li>
+      <?php if($_SESSION["jog"] == 1): ?>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?P=admin">Admin</a>
+      </li>
+      <?php endif; ?>
       <li class="nav-item">
         <a class="nav-link" href="index.php?P=logout">Kijelentkezés</a>
       </li>
