@@ -9,13 +9,27 @@
             background-color: rgba(222, 184, 135, 0.3);
             }
         </style>
-    
+        <script>
+            function alertText(id,msg,alertType)
+            {
+                if(alertType == "success")
+                {
+                document.getElementById(id).style.color = "#66CD00";
+                }
+                else
+                {
+                    document.getElementById(id).style.color = "crimson";
+                }
+                document.getElementById (id). innerHTML = msg;
+            }
+        </script>
     </HEAD>
 
     <BODY>
         <div class="container">
             <h2>Felhasználó szerkesztése</h2>
             <form action="" method="POST" accept-charset="UTF-8">
+                <input type="hidden" name="id" value=<?= $_SESSION["uid"] ?> >
                 <div class="form-group">
                     <label for="felhasznalonev">Felhasználónév: </label>
                     <input type="text" class="form-control" name="felhasznalonev" required="required" id="felhasznalonev" maxlength="255"/> <br/>
@@ -36,8 +50,43 @@
                     <label for="email_megerosites">E-mail cím megerősítése: </label>
                     <input type="email" class="form-control" name="email_megerosites" required="required" id="email_megerosites" maxlength="255"/> <br/>
                 </div>
-                <button type="submit" name="submit" value="1">Mentés </button>
+                <button type="submit" name="submit" >Mentés </button>
             </form>
         </div>
     </BODY>
 </HTML>
+
+
+
+<?php
+
+require_once DATABASE_CONTROLLER;
+if(isset($_POST["submit"]))
+{
+    if($_POST["felhasznalonev"] == "") echo "<script>alertText('alertText','A felhasználónév mező nem lehet üres!','error')</script>";
+    else if($_POST["jelszo"] == "") echo "<script>alertText('alertText','A jelszó mező nem lehet üres!','error')</script>";
+    else if($_POST["jelszo"] != $_POST["jelszo_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
+    else if($_POST["email"] == "") echo "<script>alertText('alertText','Az email mező nem lehet üres!','error')</script>";
+    else if($_POST["email"] != $_POST["email_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
+    else if(strlen($_POST["jelszo"]) < 7) echo "<script>alertText('alertText','A jelszó mező nem lehet 8 karaktertől kevesebb!','error')</script>";
+    else
+    {
+        $uname = $_POST["felhasznalonev"];
+        $checkQuery = "SELECT * FROM felhasznalok WHERE felhasznalonev = '".$uname."'";
+        $ifNotExists = classList($checkQuery);
+        if($ifNotExists === NULL || empty($ifNotExists))
+        {
+            echo "<script>alertText('alertText','Sikeres regisztráció!','success')</script>";
+        
+            $passwd = sha1($_POST["jelszo"]);
+            $email = $_POST["email"];
+            $updateQuery = "UPDATE felhasznalok SET felhasznalonev='".$uname."', jelszo='".$passwd."', email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
+            executeQuery($updateQuery);
+        }
+        else
+        {
+            echo "<script>alertText('alertText','Már van ilyen felhasználónév!','error')</script>";
+        }
+    }
+}
+?>
