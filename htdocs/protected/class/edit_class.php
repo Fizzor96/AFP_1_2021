@@ -98,9 +98,7 @@ if(isset($_POST["submit"]))
         $hely = $_POST["hely"];
         $tanarnev = $_POST["tanarnev"];
         $email = $_POST["email"];
-        #$updateQuery = "UPDATE felhasznalok SET jelszo='".$passwd."', email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
         $updateQuery = "UPDATE ora SET nev='".$nev."', ido='".$ido."', nap='".$nap."', hely='".$hely."', tanarnev='".$tanarnev."' WHERE id =".$id."";
-        var_dump($updateQuery);
         executeQuery($updateQuery);
     }
 }
