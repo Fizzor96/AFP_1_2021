@@ -85,7 +85,7 @@ if(isset($_POST["loginBtn"]))
                     $_SESSION["jog"] = $row["jog"];
                 }
                 echo "<script>alert('".$_SESSION['uid']." Bejelentkezett felhasználónév: ".$_SESSION['felhasznalonev']." Jelszava: ".$_SESSION['jelszo']." Email: ".$_SESSION['email']." Joga: ".$_SESSION['jog']."')</script>";
-                header("location: index.php");
+                header("location: index.php?P=home");
             }
         }
     }
