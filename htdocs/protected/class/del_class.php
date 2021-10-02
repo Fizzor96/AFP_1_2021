@@ -44,7 +44,9 @@ if (isset($_POST["del"]))
                         <tr>
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
+                            <?php if($_SESSION['jog'] == 1):?>
                             <td><button name = "edit" value =<?= $row['id']?>>Módosít</button></td>
+                            <?php endif; ?>
                             <td><button name = "del" value =<?= $row['id']?>>Törlés</button></td>
                         </tr>
                     <?php endforeach;?>
