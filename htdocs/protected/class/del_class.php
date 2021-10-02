@@ -10,7 +10,7 @@ $result = classList($query);
 
 if (isset($_POST["del"]))
    {
-       $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . "AND felhasznaloid = " . $_SESSION["uid"];
+       $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . " AND felhasznaloid = " . $_SESSION["uid"];
 
        var_dump($query2);
 
