@@ -5,11 +5,12 @@
 
 <?php 
 
-$query = "SELECT o.id, o.nev FROM ora o, felhasznalok_ora f WHERE f.felhasznaloid=" . $_SESSION["uid"] . "  AND f.oraid=o.id";
+$query = "SELECT id, nev, ido FROM ora WHERE id NOT IN  (SELECT o.id FROM ora o, felhasznalok_ora f WHERE f.felhasznaloid=" . $_SESSION["uid"] . "  AND f.oraid=o.id)";
+
 
 $result = classList($query);
 
-if (isset($_POST["del"]))
+if (isset($_POST["add"]))
    {
        $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . " AND felhasznaloid = " . $_SESSION["uid"];
 
@@ -39,6 +40,7 @@ if (isset($_POST["del"]))
                 <tr scope="row">
                     <th scope="col">ID</th>
                     <th scope="col">Név</th>
+                    <th scope="col">Időpont</th>
                     <th scope="col" colspan=2>Műveletek</th>
                 </tr>
             </thead>
@@ -47,6 +49,7 @@ if (isset($_POST["del"]))
                         <tr scope="row">
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
+                            <td><?=$row['ido']?></td>
                             <td><button class="btn btn-dark" name = "add" value =<?= $row['id']?>>Hozzáad</button></td>
                         </tr>
                     <?php endforeach;?>

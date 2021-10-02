@@ -40,7 +40,7 @@
         <a <?php if($_GET['P'] == "orarend"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=orarend">Órarend</a>
       </li>
       <li class="nav-item">
-        <a <?php if($_GET['P'] == "addClass"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=addClass">Tárgy felvétel</a>
+        <a <?php if($_GET['P'] == "addToTimeTable"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=addToTimeTable">Tárgy felvétel</a>
       </li>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "listClass"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=listClass">Felvett tárgyak</a>
