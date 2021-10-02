@@ -8,7 +8,7 @@ function getConnection(){
     return $connection;
 }
 
-function executeQuery($query)
+/*function executeQuery($query)
 {
     $connection = getConnection();
     if(mysqli_query($connection,$query))
@@ -17,6 +17,22 @@ function executeQuery($query)
     } else {
         echo "Hiba";
     }
+    mysqli_close($connection);
+}*/
+
+function executeQuery($query)
+{
+    $connection = getConnection();
+    $statement = mysqli_prepare($connection,$query);
+    $success = mysqli_stmt_execute($statement);
+    if($success)
+    {
+        echo "siker";
+    }
+    else{
+        echo "fail";
+    }
+    mysqli_stmt_close($statement);
     mysqli_close($connection);
 }
 
