@@ -25,7 +25,7 @@
     <li class="nav-item">
         <a <?php if($_GET['P'] == "home"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=home">Kezdőlap</a>
       </li>
-    <?php if($_SESSION["uid"] == NULL): ?>
+    <?php if($_SESSION == NULL): ?>
       <li class="nav-item">
         <a <?php if($_GET['P'] == "login"): echo "class='nav-link active'"; else: echo "class='nav-link'"; endif; ?> href="index.php?P=login">Bejelentkezés</a>
       </li>
