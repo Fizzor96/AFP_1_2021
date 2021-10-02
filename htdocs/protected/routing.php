@@ -17,7 +17,9 @@ if(!array_key_exists('P', $_GET) || empty($_GET['P']))
 		case 'deleteFromTimeTable': 
 			isUserLoggedIn() ? require_once PROTECTED_DIR.'class/del_class.php' : header('Location: index.php');
 			break;
-
+		case 'addToTimeTable': 
+			isUserLoggedIn() ? require_once PROTECTED_DIR.'class/addToTimeTable.php' : header('Location: index.php');
+			break;
 		case 'logout': userLogout(); break;
 
 		case 'edit_user' : 
