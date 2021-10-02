@@ -30,25 +30,26 @@
             <h2>Felhasználó szerkesztése</h2>
             <form action="" method="POST" accept-charset="UTF-8">
                 <input type="hidden" name="id" value=<?= $_SESSION["uid"] ?> >
+                <span id = "alertText"></span>
                 <div class="form-group">
-                    <label for="felhasznalonev">Felhasználónév: </label>
-                    <input type="text" class="form-control" name="felhasznalonev" required="required" id="felhasznalonev" maxlength="255"/> <br/>
+                    <label for="ujjelszo">Új jelszó: </label>
+                    <input type="password" class="form-control" name="ujjelszo" id="ujjelszo" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
-                    <label for="jelszo">Jelszó: </label>
-                    <input type="password" class="form-control" name="jelszo" required="required" id="jelszo" maxlength="255"/> <br/>
+                    <label for="ujjelszo_megerosites">Új jelszó megerősítése: </label>
+                    <input type="password" class="form-control" name="ujjelszo_megerosites"  id="ujjelszo_megerosites" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
-                    <label for="jelszo_megerosites">Jelszó megerősítése: </label>
-                    <input type="password" class="form-control" name="jelszo_megerosites" required="required" id="jelszo_megerosites" maxlength="255"/> <br/>
+                    <label for="regi_jelszo">Régi jelszó megerősítése: </label>
+                    <input type="password" class="form-control" name="regi_jelszo"  id="regi_jelszo" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail cím: </label>
-                    <input type="email" class="form-control" name="email" required="required" id="email" maxlength="255"/> <br/>
+                    <label for="email">Régi e-mail cím: </label>
+                    <input type="email" class="form-control" name="email" value="<?= $_SESSION['email'] ?>" id="email" maxlength="255" disabled/> <br/>
                 </div>
                 <div class="form-group">
-                    <label for="email_megerosites">E-mail cím megerősítése: </label>
-                    <input type="email" class="form-control" name="email_megerosites" required="required" id="email_megerosites" maxlength="255"/> <br/>
+                    <label for="email_megerosites">Új e-mail cím: </label>
+                    <input type="email" class="form-control" name="email_megerosites" id="email_megerosites" maxlength="255"/> <br/>
                 </div>
                 <button type="submit" name="submit" >Mentés </button>
             </form>
@@ -59,34 +60,24 @@
 
 
 <?php
-
+$oldpw = $_SESSION['jelszo'];
 require_once DATABASE_CONTROLLER;
 if(isset($_POST["submit"]))
 {
-    if($_POST["felhasznalonev"] == "") echo "<script>alertText('alertText','A felhasználónév mező nem lehet üres!','error')</script>";
-    else if($_POST["jelszo"] == "") echo "<script>alertText('alertText','A jelszó mező nem lehet üres!','error')</script>";
-    else if($_POST["jelszo"] != $_POST["jelszo_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
-    else if($_POST["email"] == "") echo "<script>alertText('alertText','Az email mező nem lehet üres!','error')</script>";
-    else if($_POST["email"] != $_POST["email_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
-    else if(strlen($_POST["jelszo"]) < 7) echo "<script>alertText('alertText','A jelszó mező nem lehet 8 karaktertől kevesebb!','error')</script>";
+    if($_POST["ujjelszo"] == "") echo "<script>alertText('alertText','Az új jelszó mező nem lehet üres!','error')</script>";
+    else if(sha1($_POST["regi_jelszo"]) != $oldpw) echo"<script>alertText('alertText','A régi jelszó nem megfelelő!','error')</script>";
+    else if($_POST["ujjelszo"] != $_POST["ujjelszo_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
+    else if($_POST["email"] == "") echo "<script>alertText('alertText','Az email cím nem lehet üres!','error')</script>";
+    else if($_POST["email"] != $_POST["email_megerosites"]) echo "<script>alertText('alertText','Az email címek nem egyeznek!','error')</script>";
+    else if(strlen($_POST["ujjelszo"]) < 7) echo "<script>alertText('alertText','Az új jelszó 8 karaktertől kevesebb!','error')</script>";
     else
     {
-        $uname = $_POST["felhasznalonev"];
-        $checkQuery = "SELECT * FROM felhasznalok WHERE felhasznalonev = '".$uname."'";
-        $ifNotExists = classList($checkQuery);
-        if($ifNotExists === NULL || empty($ifNotExists))
-        {
-            echo "<script>alertText('alertText','Sikeres adatváltoztatás!','success')</script>";
-        
-            $passwd = sha1($_POST["jelszo"]);
-            $email = $_POST["email"];
-            $updateQuery = "UPDATE felhasznalok SET felhasznalonev='".$uname."', jelszo='".$passwd."', email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
-            executeQuery($updateQuery);
-        }
-        else
-        {
-            echo "<script>alertText('alertText','Már van ilyen felhasználónév!','error')</script>";
-        }
+        echo "<script>alertText('alertText','Sikeres adatváltoztatás!','success')</script>";
+        $passwd = sha1($_POST["ujjelszo"]);
+        $email = $_POST["email"];
+        $updateQuery = "UPDATE felhasznalok SET jelszo='".$passwd."', email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
+        executeQuery($updateQuery);
     }
 }
+
 ?>
