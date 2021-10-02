@@ -5,18 +5,19 @@
 
 <?php 
 
-$query = "SELECT o.id, o.nev FROM ora o, felhasznalok_ora f WHERE f.felhasznaloid=" . $_SESSION["uid"] . "  AND f.oraid=o.id";
+$query = "SELECT id, felhasznalonev, email, jog FROM felhasznalok";
 
 $result = classList($query);
 
 if (isset($_POST["del"]))
    {
-       $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . " AND felhasznaloid = " . $_SESSION["uid"];
+       $query2 = "DELETE FROM felhasznalok WHERE id = " . $_POST["del"];
 
        
-       executeQuery($query2);
+       //executeQuery($query2);
        header("Refresh:0");
 
+        //nincs tesztelve, de működik majd, ha lesz az adatbázis cascade-elve
 
       
    }
@@ -32,7 +33,7 @@ if (isset($_POST["del"]))
     <p>Nincs rekord</p>
     <?php else: ?>
         
-        <h2>Tárgyak listája</2>
+        <h2>Felhasználók listája</2>
         <table class="table table-sm table-dark text-center ">
         <form method="post">
             <thead>
@@ -46,10 +47,10 @@ if (isset($_POST["del"]))
                     <?php foreach($result as $row): ?>
                         <tr scope="row">
                             <td><?=$row['id']?></td>
-                            <td><?=$row['nev']?></td>
-                            <?php if($_SESSION['jog'] == 1):?>
+                            <td><?=$row['felhasznalonev']?></td>
+                            
                             <td><button class="btn btn-dark" name = "edit" value =<?= $row['id']?>>Módosít</button></td>
-                            <?php endif; ?>
+                            
                             <td><button class="btn btn-dark" name = "del" value =<?= $row['id']?>>Törlés</button></td>
                         </tr>
                     <?php endforeach;?>
