@@ -19,6 +19,10 @@ if(!array_key_exists('P', $_GET) || empty($_GET['P']))
 			break;
 
 		case 'logout': userLogout(); break;
+
+		case 'edit_class' : 
+			isUserLoggedIn() ? require_once PROTECTED_DIR.'class/edit_class.php' : header('Location: index.php');
+			break;
 		default: require_once PROTECTED_DIR.'404.php'; break;
 	}
 
