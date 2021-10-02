@@ -68,6 +68,6 @@ function isUserLoggedIn()
 function userLogout() {
 	session_unset();
 	session_destroy();
-	header('Location: index.php?P=login');
+	header('Location: index.php?P=home');
 }
 ?>
