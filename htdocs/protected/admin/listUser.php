@@ -25,7 +25,7 @@ if (isset($_POST["del"]))
 
    if(isset($_POST["edit"]))
    {
-       header("Location:index.php?P=edit_class&G=".$_POST["edit"]);
+      // header("Location:index.php?P=edit_class&G=".$_POST["edit"]);
    }
 ?>
 
