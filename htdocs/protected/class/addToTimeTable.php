@@ -47,10 +47,7 @@ if (isset($_POST["del"]))
                         <tr scope="row">
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
-                            <?php if($_SESSION['jog'] == 1):?>
-                            <td><button class="btn btn-dark" name = "edit" value =<?= $row['id']?>>Módosít</button></td>
-                            <?php endif; ?>
-                            <td><button class="btn btn-dark" name = "del" value =<?= $row['id']?>>Törlés</button></td>
+                            <td><button class="btn btn-dark" name = "add" value =<?= $row['id']?>>Hozzáad</button></td>
                         </tr>
                     <?php endforeach;?>
             </tbody>
