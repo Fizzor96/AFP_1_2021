@@ -26,31 +26,52 @@
     </HEAD>
 
     <BODY>
+        <br>
         <div class="container">
             <h2>Óra szerkesztése</h2>
             <form action="" method="POST" accept-charset="UTF-8">
+                <span id = "alertText"></span>
                 <div class="form-group">
                     <label for="nev">Óra név: </label>
-                    <input type="text" class="form-control" name="nev" required="required" id="nev" maxlength="255"/> <br/>
+                    <input type="text" class="form-control" value="<?=$_['nev']?>"  name="nev" id="nev" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="ido">Időpont: </label>
-                    <input type="enum" class="form-control" name="jelszo" required="required" id="jelszo" maxlength="255"/> <br/>
+                    <select name="ido">
+                        <option value="8:00-10:00">8:00-10:00</option>
+                        <option value="10:00-12:00">10:00-12:00</option>
+                        <option value="12:00-14:00">12:00-14:00</option>
+                        <option value="14:00-16:00">14:00-16:00</option>
+                        <option value="16:00-18:00">16:00-18:00</option>
+                        <option value="18:00-20:00">18:00-20:00</option>
+                        </select>
                 </div>
                 <div class="form-group">
-                    <label for="jelszo_megerosites">Jelszó megerősítése: </label>
-                    <input type="password" class="form-control" name="jelszo_megerosites" required="required" id="jelszo_megerosites" maxlength="255"/> <br/>
+                    <label for="nap">Nap: </label>
+                    <select name="date">
+                        <option value="1">Hétfő</option>
+                        <option value="2">Kedd</option>
+                        <option value="3">Szerda</option>
+                        <option value="4">Csütörtök</option>
+                        <option value="5">Péntek</option>
+                        </select>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail cím: </label>
-                    <input type="email" class="form-control" name="email" required="required" id="email" maxlength="255"/> <br/>
+                    <label for="hely">Helyszín: </label>
+                    <input type="text" class="form-control" name="hely" id="hely" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
-                    <label for="email_megerosites">E-mail cím megerősítése: </label>
-                    <input type="email" class="form-control" name="email_megerosites" required="required" id="email_megerosites" maxlength="255"/> <br/>
+                    <label for="tanarnev">Tanár neve: </label>
+                    <input type="text" class="form-control" name="tanarnev" id="tanarnev" maxlength="255"/> <br/>
                 </div>
                 <button type="submit" name="submit" >Mentés </button>
             </form>
         </div>
     </BODY>
 </HTML>
+
+
+<?php 
+
+
+?>

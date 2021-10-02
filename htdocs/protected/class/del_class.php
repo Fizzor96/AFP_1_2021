@@ -4,17 +4,21 @@
 
 <?php 
 
-$query = "SELECT o.id, o.nev FROM ora o, felhasznalok_ora f WHERE f.felhasznaloid=1  AND f.oraid=o.id";
+$query = "SELECT o.id, o.nev FROM ora o, felhasznalok_ora f WHERE f.felhasznaloid=" . $_SESSION["uid"] . "  AND f.oraid=o.id";
 
 $result = classList($query);
 
 if (isset($_POST["del"]))
    {
-       $query2= "DELETE FROM ora WHERE id=" . $_POST["del"];
+       $query2 = "DELETE FROM felhasznalok_ora WHERE oraid = " . $_POST["del"] . " AND felhasznaloid = " . $_SESSION["uid"];
 
-       executeQuery($query2);
+       var_dump($query2);
 
-       header("Refresh:0");
+       //executeQuery($query2);
+       //header("Refresh:0");
+
+
+       var_dump($query2);
       
    }
 ?>
