@@ -22,7 +22,14 @@ if (isset($_POST["add"]))
       
    }
 
+   if(isset($_POST["del"]))
+   {
+    $query3 = "DELETE FROM ora WHERE id = " . $_POST["del"];
 
+       
+    executeQuery($query3);
+    header("Refresh:0");
+   }
   
 ?>
 
@@ -47,6 +54,9 @@ if (isset($_POST["add"]))
                             <td><?=$row['id']?></td>
                             <td><?=$row['nev']?></td>
                             <td><?=$row['ido']?></td>
+                            <?php if($_SESSION['jog'] == 1):?>
+                            <td><button class="btn btn-dark" name = "del" value =<?= $row['id']?>>Óra törlése</button></td>
+                            <?php endif; ?>
                             <td><button class="btn btn-dark" name = "add" value =<?= $row['id']?>>Hozzáad</button></td>
                         </tr>
                     <?php endforeach;?>
