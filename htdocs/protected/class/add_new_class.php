@@ -65,7 +65,7 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["building"] != null 
                         <option value="5">Péntek</option>
                         </select>
                         <select name="time">
-                        <option value="8:00-10:00">8:00-10:00</option>
+                        <option value="08:00-10:00">08:00-10:00</option>
                         <option value="10:00-12:00">10:00-12:00</option>
                         <option value="12:00-14:00">12:00-14:00</option>
                         <option value="14:00-16:00">14:00-16:00</option>
