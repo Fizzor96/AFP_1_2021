@@ -18,7 +18,7 @@
 $time = array();
 array_push($time, "", "08:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00");
 
-echo "<div><table class='table table-sm table-dark text-center'>
+echo "<br><h2>Órarendem</h2><div><table class='table table-sm table-dark text-center'>
 <th></th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th>";
 for ($i = 1; $i <= 6; $i++) { //órák
     echo "<tr>";
