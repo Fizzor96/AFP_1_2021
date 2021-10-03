@@ -9,3 +9,5 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 4 | Bejelentkezés | A bejelentkező oldal megjelenik | Siker | - | Boldizsár Balázs | 2020.10.03
 5 | Bejelentkezés | A bejelentkezés rossz adatok esetén nem működik | Siker | - | Boldizsár Balázs | 2020.10.03
 6 | Bejelentkezés | Helyes adatok esetén a bejelentkezés sikeres | Siker | - | Boldizsár Balázs | 2020.10.03
+7 | Bejelentkezés | Oldal betöltés sikertenel bejelentkezés után | Sikertelen | szintaktikai hiba miatt az oldal nem töltött be egy másikra | Boldizsár Balázs | 2020.10.03
+8 | Bejelentkezés | Bejelentkezés után a bejelentkező adatai elmentődnek | Siker | külön változókban van eltárolva a felhasználók adatai | Boldizsár Balázs | 2020.10.03
