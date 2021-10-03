@@ -8,3 +8,4 @@ Lépés | Funkció | Tesztelés leírása | Státusz | Megjegyzés | Aláírás 
 3 | Új óra rögzítése adminként helytelen adatokkal | Az adatok feltöltésének nem kellene teljesülnie helytelen adatokkal | Siker | Nem írja ki, hogy nem töltötte fel. Kiírhatná. | Ács Róbert | 2020.10.03
 4 | Óra felvétele az órarendembe | Ezen az oldalon a megfelelő gombra kattintva eltárolja az adatbázisban, hogy nekem van ilyen órám | Siker | - | Ács Róbert | 2020.10.03
 5 | Órarendem megjelenítése | Órarendem megjelenik, minden felvett órát olvashatóan, átláthatóan lehet értelmezni | Siker | - | Ács Róbert | 2020.10.03
+6 | Órarendem megjelenítése óraütközés esetén | Órarendem megjelenik, minden felvett órát olvashatóan, átláthatóan lehet értelmezni akkor is, ha óraütközés történik | Sikertelen | - | Ács Róbert | 2020.10.03
