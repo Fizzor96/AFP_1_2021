@@ -5,7 +5,7 @@
 
 <?php 
 
-$query = "SELECT id, felhasznalonev, email, jog FROM felhasznalok";
+$query = "SELECT id, felhasznalonev, email, jog FROM felhasznalok WHERE id<>" . $_SESSION["uid"];
 
 $result = classList($query);
 
