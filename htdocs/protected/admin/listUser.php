@@ -49,7 +49,6 @@ if (isset($_POST["del"]))
                             <td><?=$row['id']?></td>
                             <td><?=$row['felhasznalonev']?></td>
                             
-                            <td><button class="btn btn-dark" name = "edit" value =<?= $row['id']?>>Módosít</button></td>
                             
                             <td><button class="btn btn-dark" name = "del" value =<?= $row['id']?>>Törlés</button></td>
                         </tr>
