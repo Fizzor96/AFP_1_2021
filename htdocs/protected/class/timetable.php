@@ -36,14 +36,13 @@ for ($i = 1; $i <= 6; $i++) { //órák
         } else {
             echo "<td>";
             foreach ($result as $row) { //ez általában 1szer fut le viszont azért így van megoldva, hogy ha óraütközés van majd itt kell kezelni
-                //echo "foreach kör<br>";
                 $nap = $row['nap'];
                 $nev = $row['nev'];
                 $hely = $row['hely'];
                 $tanar = $row["tanarnev"];
                 $ido = $row['ido'];
                 //if ($nap == $j && $ido == $i)
-                    echo "<span>$nev<br>$hely<br>$tanar<br>$nap<br>$ido</span>";
+                    echo "<span>$nev<br>$hely<br>$tanar</span>";
                 //else {
                 //    echo "Nincs";
                 //}
