@@ -75,15 +75,26 @@ $id = get_g();
                         <option value="5">Péntek</option>
                         </select>
                 </div>
+                <div class ="form-group">
+                    <label for="epulet">Épület: </label>
+                    <select name="building" placeholder="Épület">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="C*">C*</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        </select> <br>
+                </div>
                 <div class="form-group">
                     <label for="hely">Helyszín: </label>
-                    <input type="text" class="form-control" name="hely" id="hely" maxlength="255"/> <br/>
+                    <input type="text" min=1 max=400 class="form-control" name="hely" id="hely" maxlength="255"/> <br/>
                 </div>
                 <div class="form-group">
                     <label for="tanarnev">Tanár neve: </label>
                     <input type="text" class="form-control" name="tanarnev" id="tanarnev" maxlength="255"/> <br/>
                 </div>
-                <button type="submit" name="submit" >Mentés </button>
+                <button id="submit" type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Mentés </button>
             </form>
         </div>
     </BODY>
@@ -103,11 +114,13 @@ if(isset($_POST["submit"]))
         $id = get_g();
         $nev = $_POST["nev"];
         $ido = $_POST["ido"];
+        $building = $_POST["building"];
         $nap = $_POST["nap"];
         $hely = $_POST["hely"];
         $tanarnev = $_POST["tanarnev"];
         $email = $_POST["email"];
-        $updateQuery = "UPDATE ora SET nev='".$nev."', ido='".$ido."', nap='".$nap."', hely='".$hely."', tanarnev='".$tanarnev."' WHERE id =".$id."";
+        $epulet_hely=$building. ":" .$hely;
+        $updateQuery = "UPDATE ora SET nev='".$nev."', ido='".$ido."', nap='".$nap."', hely='".$epulet_hely."', tanarnev='".$tanarnev."' WHERE id =".$id."";
         executeQuery($updateQuery);
     }
 }
