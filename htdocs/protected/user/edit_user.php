@@ -44,15 +44,20 @@
                     <label for="regi_jelszo">Régi jelszó megerősítése: </label>
                     <input type="password" class="form-control" name="regi_jelszo"  id="regi_jelszo" maxlength="255"/> <br/>
                 </div>
+                <button type="button" name="submitjelszo" class="btn btn-primary btn-lg btn-block">Mentés</button>
+        </form>
+        <br>
+        <form action="" method="POST" accept-charset="UTF-8">
                 <div class="form-group">
                     <label for="email">Régi e-mail cím: </label>
                     <input type="email" class="form-control" name="email" value="<?= $_SESSION['email'] ?>" id="email" maxlength="255" disabled/> <br/>
                 </div>
                 <div class="form-group">
-                    <label for="email_megerosites">Új e-mail cím: </label>
-                    <input type="email" class="form-control" name="email_megerosites" id="email_megerosites" maxlength="255"/> <br/>
+                    <label for="email_uj">Új e-mail cím: </label>
+                    <input type="email" class="form-control" name="email_uj" id="email_uj" maxlength="255"/> <br/>
                 </div>
-                <button type="submit" name="submit" >Mentés </button>
+                <button id ="submitemail" type="submitemail" name="submitemail" class="btn btn-primary btn-lg btn-block">Mentés</button>
+                <br>
             </form>
         </div>
     </BODY>
@@ -63,21 +68,41 @@
 <?php
 $oldpw = $_SESSION['jelszo'];
 require_once DATABASE_CONTROLLER;
-if(isset($_POST["submit"]))
+if(isset($_POST["submitjelszo"]))
 {
     if($_POST["ujjelszo"] == "") echo "<script>alertText('alertText','Az új jelszó mező nem lehet üres!','error')</script>";
     else if(sha1($_POST["regi_jelszo"]) != $oldpw) echo"<script>alertText('alertText','A régi jelszó nem megfelelő!','error')</script>";
     else if($_POST["ujjelszo"] != $_POST["ujjelszo_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
-    else if($_POST["email"] == "") echo "<script>alertText('alertText','Az email cím nem lehet üres!','error')</script>";
-    else if($_POST["email"] != $_POST["email_megerosites"]) echo "<script>alertText('alertText','Az email címek nem egyeznek!','error')</script>";
+    //else if($_POST["email"] == "") echo "<script>alertText('alertText','Az email cím nem lehet üres!','error')</script>";
+    //else if($_POST["email"] != $_POST["email_megerosites"]) echo "<script>alertText('alertText','Az email címek nem egyeznek!','error')</script>";
     else if(strlen($_POST["ujjelszo"]) < 7) echo "<script>alertText('alertText','Az új jelszó 8 karaktertől kevesebb!','error')</script>";
     else
     {
-        echo "<script>alertText('alertText','Sikeres adatváltoztatás!','success')</script>";
+        echo "<script>alertText('alertText','Sikeres jelszó változtatás!','success')</script>";
         $passwd = sha1($_POST["ujjelszo"]);
-        $email = $_POST["email"];
-        $updateQuery = "UPDATE felhasznalok SET jelszo='".$passwd."', email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
+        //$email = $_POST["email"];
+        $updateQuery = "UPDATE felhasznalok SET jelszo='".$passwd."' WHERE id ='".$_SESSION["uid"]."'";
         executeQuery($updateQuery);
+        
+    }
+}
+
+if(isset($_POST["submitemail"]))
+{
+    echo"Belépett";
+    //if($_POST["ujjelszo"] == "") echo "<script>alertText('alertText','Az új jelszó mező nem lehet üres!','error')</script>";
+    //else if(sha1($_POST["regi_jelszo"]) != $oldpw) echo"<script>alertText('alertText','A régi jelszó nem megfelelő!','error')</script>";
+    //else if($_POST["ujjelszo"] != $_POST["ujjelszo_megerosites"]) echo "<script>alertText('alertText','A jelszavak nem egyeznek!','error')</script>";
+    if($_POST["email_uj"] == "") echo "<script>alertText('alertText','Az új email cím nem lehet üres!','error')</script>";
+    //else if(strlen($_POST["ujjelszo"]) < 7) echo "<script>alertText('alertText','Az új jelszó 8 karaktertől kevesebb!','error')</script>";
+    else
+    {
+        echo "<script>alertText('alertText','Sikeres email változtatás!','success')</script>";
+        //$passwd = sha1($_POST["ujjelszo"]);
+        $email = $_POST["email_uj"];
+        $updateQuery = "UPDATE felhasznalok SET email='".$email."' WHERE id ='".$_SESSION["uid"]."'";
+        executeQuery($updateQuery);
+        
     }
 }
 
