@@ -14,10 +14,9 @@ if (isset($_POST["del"]))
        $query2 = "DELETE FROM felhasznalok WHERE id = " . $_POST["del"];
 
        
-       //executeQuery($query2);
+       executeQuery($query2);
        header("Refresh:0");
 
-        //nincs tesztelve, de működik majd, ha lesz az adatbázis cascade-elve
 
       
    }
@@ -49,7 +48,6 @@ if (isset($_POST["del"]))
                             <td><?=$row['id']?></td>
                             <td><?=$row['felhasznalonev']?></td>
                             
-                            <td><button class="btn btn-dark" name = "edit" value =<?= $row['id']?>>Módosít</button></td>
                             
                             <td><button class="btn btn-dark" name = "del" value =<?= $row['id']?>>Törlés</button></td>
                         </tr>

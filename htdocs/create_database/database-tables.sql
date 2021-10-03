@@ -23,5 +23,5 @@ nap ENUM ("1","2","3","4","5") NOT NULL,
 hely VARCHAR(255) NOT NULL,
 tanarnev VARCHAR(255) NOT NULL);
 
-ALTER TABLE felhasznalok_ora ADD CONSTRAINT felhasznalok_ora_felhasznaloid_felhasznalok_id FOREIGN KEY (felhasznaloid) REFERENCES felhasznalok(id);
-ALTER TABLE felhasznalok_ora ADD CONSTRAINT felhasznalok_ora_oraid_ora_id FOREIGN KEY (oraid) REFERENCES ora(id);
+ALTER TABLE felhasznalok_ora ADD CONSTRAINT felhasznalok_ora_felhasznaloid_felhasznalok_id FOREIGN KEY (felhasznaloid) REFERENCES felhasznalok(id) ON DELETE CASCADE;
+ALTER TABLE felhasznalok_ora ADD CONSTRAINT felhasznalok_ora_oraid_ora_id FOREIGN KEY (oraid) REFERENCES ora(id) ON DELETE CASCADE;
