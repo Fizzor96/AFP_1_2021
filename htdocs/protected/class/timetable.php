@@ -10,10 +10,8 @@
     </style>
 
 </head>
-
-</html>
+<div class="container">
 <?php
-
 
 $time = array();
 array_push($time, "", "08:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00");
@@ -53,3 +51,6 @@ for ($i = 1; $i <= 6; $i++) { //órák
 echo "</tr>";
 
 echo "</table></div>";
+?>
+</div>
+</html>
