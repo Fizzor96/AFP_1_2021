@@ -95,6 +95,7 @@ $id = get_g();
                     <input type="text" class="form-control" name="tanarnev" id="tanarnev" maxlength="255"/> <br/>
                 </div>
                 <button id="submit" type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Mentés </button>
+                <button id="torles" type="submit" name="torles" class="btn btn-secondary btn-lg btn-block">Törlés</button>
             </form>
         </div>
     </BODY>
@@ -123,5 +124,14 @@ if(isset($_POST["submit"]))
         $updateQuery = "UPDATE ora SET nev='".$nev."', ido='".$ido."', nap='".$nap."', hely='".$epulet_hely."', tanarnev='".$tanarnev."' WHERE id =".$id."";
         executeQuery($updateQuery);
     }
+}
+
+if(isset($_POST["torles"]))
+{
+        $id = get_g();
+        $deleteQuery = "DELETE FROM felhasznalok_ora WHERE oraid=".$id;
+        executeQuery($deleteQuery);
+        $deleteQuery1 = "DELETE FROM ora WHERE id=".$id;
+        executeQuery($deleteQuery1);
 }
 ?>
