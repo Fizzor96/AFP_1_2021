@@ -10,7 +10,14 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["building"] != null 
         $date = $_POST["date"];
         $time = $_POST["time"];
         $prof = $_POST["prof"];
-        $place = $building . ":" . $room;
+        if($building != "Online terem")
+        {
+            $place = $building . $room;
+        }
+        else {
+            $place = $building;
+        }
+        
 
         //az adatbázis tábla nevét majd át kell írni a valódira, meg lehet kell még ezen az sql-n alakítani mivel a nap is kellene
         //nincs még tesztelve, hogy működik vagy sem
@@ -44,15 +51,16 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["building"] != null 
                         <span> Óra helye: </span><br>
                         <select name="building" placeholder="Épület">
                         <option value="" disabled selected hidden>Épület</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="C*">C*</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
+                        <option value="A:">A</option>
+                        <option value="B:">B</option>
+                        <option value="C:">C</option>
+                        <option value="C*:">C*</option>
+                        <option value="D:">D</option>
+                        <option value="E:">E</option>
+                        <option value="Online terem">Onine terem</option>
                         </select> <br>
-                        <input type="number" min=1 max=400 placeholder="Terem száma" name="room"> <!-- Az óra helyét úgy kapod meg, hogy nézed a select value-jét, hozzá fűzöl egy :-ot és utána hozzá fűzöd ezt a terem számát-->
-                    </td>
+                        <input type="number" min=1 max=400 value =1 placeholder="Terem száma" name="room"> 
+                     </td>
                 </tr>
                 <tr>
                     <td>
@@ -65,12 +73,13 @@ if (isset($_POST["in"]) && $_POST["name"] != null && $_POST["building"] != null 
                         <option value="5">Péntek</option>
                         </select>
                         <select name="time">
-                        <option value="08:00-10:00">08:00-10:00</option>
-                        <option value="10:00-12:00">10:00-12:00</option>
-                        <option value="12:00-14:00">12:00-14:00</option>
-                        <option value="14:00-16:00">14:00-16:00</option>
-                        <option value="16:00-18:00">16:00-18:00</option>
-                        <option value="18:00-20:00">18:00-20:00</option>
+                        <option value="08:00-09:40">08:00-09:40</option> <!-- 08:00-09:40","10:00-11:40","11:50-13:30","13:40-15:20","15:30-17:10","17:20-19:00","18:30-19:55 -->
+                        <option value="10:00-11:40">10:00-11:40</option>
+                        <option value="11:50-13:30">11:50-13:30</option>
+                        <option value="13:40-15:20">13:40-15:20</option>
+                        <option value="15:30-17:10">15:30-17:10</option>
+                        <option value="17:20-19:00">17:20-19:00</option>
+                        <option value="18:30-19:55">18:30-19:55</option>
                         </select>
                     </td>
                 </tr>
