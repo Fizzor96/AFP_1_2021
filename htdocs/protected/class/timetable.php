@@ -14,11 +14,11 @@
 <?php
 
 $time = array();
-array_push($time, "", "08:00-10:00", "10:00-12:00", "12:00-14:00", "14:00-16:00", "16:00-18:00", "18:00-20:00");
+array_push($time, "", "08:00-09:40","10:00-11:40","11:50-13:30","13:40-15:20","15:30-17:10","17:20-19:00","18:30-19:55");
 
 echo "<br><h2>Órarendem</h2><div><table class='table table-sm table-dark text-center'>
 <th></th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th>";
-for ($i = 1; $i <= 6; $i++) { //órák
+for ($i = 1; $i <= 7; $i++) { //órák
     echo "<tr>";
 
     echo "<th>$time[$i]</th>";
